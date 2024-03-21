@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5283BB932BAC5B8B00D0C6AF /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283BB922BAC5B8B00D0C6AF /* Task.swift */; };
+		5283BB972BAC786C00D0C6AF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5283BB962BAC786C00D0C6AF /* GoogleService-Info.plist */; };
+		5283BB9B2BAC7B6100D0C6AF /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5283BB9A2BAC7B6100D0C6AF /* FirebaseAnalytics */; };
+		5283BB9D2BAC7B6A00D0C6AF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5283BB9C2BAC7B6A00D0C6AF /* FirebaseAuth */; };
 		52A000032BA5B87A00832A2D /* TodoSharingSNSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A000022BA5B87A00832A2D /* TodoSharingSNSTests.swift */; };
 		52A0000D2BA5B87A00832A2D /* TodoSharingSNSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0000C2BA5B87A00832A2D /* TodoSharingSNSUITests.swift */; };
 		52A0000F2BA5B87A00832A2D /* TodoSharingSNSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0000E2BA5B87A00832A2D /* TodoSharingSNSUITestsLaunchTests.swift */; };
@@ -37,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		5283BB922BAC5B8B00D0C6AF /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		5283BB962BAC786C00D0C6AF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		52A000022BA5B87A00832A2D /* TodoSharingSNSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoSharingSNSTests.swift; sourceTree = "<group>"; };
 		52A000082BA5B87A00832A2D /* TodoSharingSNSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoSharingSNSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52A0000C2BA5B87A00832A2D /* TodoSharingSNSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoSharingSNSUITests.swift; sourceTree = "<group>"; };
@@ -62,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5283BB9B2BAC7B6100D0C6AF /* FirebaseAnalytics in Frameworks */,
+				5283BB9D2BAC7B6A00D0C6AF /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +81,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5283BB992BAC7B6100D0C6AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		52A000012BA5B87A00832A2D /* TodoSharingSNSTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,10 +108,12 @@
 		52A0FFE32BA5B87900832A2D = {
 			isa = PBXGroup;
 			children = (
+				5283BB962BAC786C00D0C6AF /* GoogleService-Info.plist */,
 				52A0FFEE2BA5B87900832A2D /* TodoSharingSNS */,
 				52A000012BA5B87A00832A2D /* TodoSharingSNSTests */,
 				52A0000B2BA5B87A00832A2D /* TodoSharingSNSUITests */,
 				52A0FFED2BA5B87900832A2D /* Products */,
+				5283BB992BAC7B6100D0C6AF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -167,6 +182,10 @@
 			dependencies = (
 			);
 			name = TodoSharingSNS;
+			packageProductDependencies = (
+				5283BB9A2BAC7B6100D0C6AF /* FirebaseAnalytics */,
+				5283BB9C2BAC7B6A00D0C6AF /* FirebaseAuth */,
+			);
 			productName = TodoSharingSNS;
 			productReference = 52A0FFEC2BA5B87900832A2D /* TodoSharingSNS.app */;
 			productType = "com.apple.product-type.application";
@@ -221,6 +240,9 @@
 				Base,
 			);
 			mainGroup = 52A0FFE32BA5B87900832A2D;
+			packageReferences = (
+				5283BB982BAC7A6E00D0C6AF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 52A0FFED2BA5B87900832A2D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -246,6 +268,7 @@
 			files = (
 				52A0FFF92BA5B87A00832A2D /* Preview Assets.xcassets in Resources */,
 				52A0FFF62BA5B87A00832A2D /* Assets.xcassets in Resources */,
+				5283BB972BAC786C00D0C6AF /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,6 +613,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5283BB982BAC7A6E00D0C6AF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.23.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5283BB9A2BAC7B6100D0C6AF /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5283BB982BAC7A6E00D0C6AF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		5283BB9C2BAC7B6A00D0C6AF /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5283BB982BAC7A6E00D0C6AF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 52A0FFE42BA5B87900832A2D /* Project object */;
 }
