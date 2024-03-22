@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import SwiftData
 import FirebaseCore
 
 class AppDelegate: NSObject, UIApplicationDelegate {
@@ -22,24 +21,16 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 struct TodoSharingSNSApp: App {
     // register app delegate for Firebase setup
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
+    @StateObject var viewModel = AuthViewModel()
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            // ログイン状態によって画面遷移するページを変更する
+            if viewModel.isAuthenticated {
+                LoggedInView(viewModel: viewModel)
+            } else {
+                SignInView(viewModel: viewModel)
+            }
         }
-        .modelContainer(sharedModelContainer)
     }
 }
