@@ -39,7 +39,7 @@ struct SignInView: View {
                 }
                 // パスワードのリセットページへ移動する
                 NavigationLink(destination: ResetPasswordView(viewModel: viewModel)) {
-                    Text("Password Reset")
+                    Text("Reset Password")
                         .padding(.top, 16)
                 }
             }

@@ -12,7 +12,7 @@ struct LoggedInView: View {
 
     var body: some View {
         VStack {
-            Text("Hello, you're logged in!")
+            Text("You're logged in.")
                 .font(.title)
                 .padding()
             Button("Log Out") {
