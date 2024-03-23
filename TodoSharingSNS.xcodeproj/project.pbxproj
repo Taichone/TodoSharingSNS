@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5283BB932BAC5B8B00D0C6AF /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283BB922BAC5B8B00D0C6AF /* Task.swift */; };
+		5283BB932BAC5B8B00D0C6AF /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283BB922BAC5B8B00D0C6AF /* Todo.swift */; };
 		5283BB972BAC786C00D0C6AF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5283BB962BAC786C00D0C6AF /* GoogleService-Info.plist */; };
 		5283BB9B2BAC7B6100D0C6AF /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5283BB9A2BAC7B6100D0C6AF /* FirebaseAnalytics */; };
 		5283BB9D2BAC7B6A00D0C6AF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5283BB9C2BAC7B6A00D0C6AF /* FirebaseAuth */; };
@@ -17,6 +17,7 @@
 		5283BBA72BADAB0E00D0C6AF /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283BBA62BADAB0E00D0C6AF /* SignUpView.swift */; };
 		5283BBA92BADABD400D0C6AF /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283BBA82BADABD400D0C6AF /* ResetPasswordView.swift */; };
 		5283BBAB2BAEA97100D0C6AF /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5283BBAA2BAEA97100D0C6AF /* Localizable.xcstrings */; };
+		5283BBB22BAF0A1300D0C6AF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283BBB12BAF0A1300D0C6AF /* User.swift */; };
 		52A000032BA5B87A00832A2D /* TodoSharingSNSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A000022BA5B87A00832A2D /* TodoSharingSNSTests.swift */; };
 		52A0000D2BA5B87A00832A2D /* TodoSharingSNSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0000C2BA5B87A00832A2D /* TodoSharingSNSUITests.swift */; };
 		52A0000F2BA5B87A00832A2D /* TodoSharingSNSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0000E2BA5B87A00832A2D /* TodoSharingSNSUITestsLaunchTests.swift */; };
@@ -43,7 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5283BB922BAC5B8B00D0C6AF /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		5283BB922BAC5B8B00D0C6AF /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		5283BB962BAC786C00D0C6AF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5283BB9F2BAD9D8600D0C6AF /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		5283BBA22BADAA7000D0C6AF /* LoggedInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInView.swift; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 		5283BBA62BADAB0E00D0C6AF /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		5283BBA82BADABD400D0C6AF /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
 		5283BBAA2BAEA97100D0C6AF /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		5283BBB12BAF0A1300D0C6AF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		52A000022BA5B87A00832A2D /* TodoSharingSNSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoSharingSNSTests.swift; sourceTree = "<group>"; };
 		52A000082BA5B87A00832A2D /* TodoSharingSNSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoSharingSNSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52A0000C2BA5B87A00832A2D /* TodoSharingSNSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoSharingSNSUITests.swift; sourceTree = "<group>"; };
@@ -176,7 +178,8 @@
 			isa = PBXGroup;
 			children = (
 				52A0FFEF2BA5B87900832A2D /* TodoSharingSNSApp.swift */,
-				5283BB922BAC5B8B00D0C6AF /* Task.swift */,
+				5283BB922BAC5B8B00D0C6AF /* Todo.swift */,
+				5283BBB12BAF0A1300D0C6AF /* User.swift */,
 				5283BBA12BADA9F500D0C6AF /* View */,
 				5283BB9E2BAD9D7700D0C6AF /* ViewModel */,
 				52A0FFF72BA5B87A00832A2D /* Preview Content */,
@@ -343,8 +346,9 @@
 			files = (
 				5283BBA02BAD9D8600D0C6AF /* AuthViewModel.swift in Sources */,
 				5283BBA32BADAA7000D0C6AF /* LoggedInView.swift in Sources */,
-				5283BB932BAC5B8B00D0C6AF /* Task.swift in Sources */,
+				5283BB932BAC5B8B00D0C6AF /* Todo.swift in Sources */,
 				5283BBA92BADABD400D0C6AF /* ResetPasswordView.swift in Sources */,
+				5283BBB22BAF0A1300D0C6AF /* User.swift in Sources */,
 				52A0FFF02BA5B87900832A2D /* TodoSharingSNSApp.swift in Sources */,
 				5283BBA72BADAB0E00D0C6AF /* SignUpView.swift in Sources */,
 				5283BBA52BADAAD100D0C6AF /* SignInView.swift in Sources */,
