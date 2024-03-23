@@ -21,12 +21,32 @@
         }
       }
     },
+    "Friend List View" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "友達リスト"
+          }
+        }
+      }
+    },
     "Log Out" : {
       "localizations" : {
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "ログアウト"
+          }
+        }
+      }
+    },
+    "My Todo List View" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自分のTodoリスト"
           }
         }
       }
