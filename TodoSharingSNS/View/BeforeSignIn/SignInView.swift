@@ -10,7 +10,7 @@ import SwiftUI
 struct SignInView: View {
     @State private var email: String = ""
     @State private var password: String = ""
-    @ObservedObject var viewModel: AuthViewModel
+    @ObservedObject var userManager: UserManager
     
     var body: some View {
         NavigationView {
@@ -24,16 +24,16 @@ struct SignInView: View {
                     .padding()
                 
                 Button("Sign In") {
-                    self.viewModel.signIn(email: self.email, password: self.password)
+                    self.userManager.signIn(email: self.email, password: self.password)
                 }
                 
                 // 新規登録画面へ遷移
-                NavigationLink(destination: SignUpView(viewModel: self.viewModel)) {
+                NavigationLink(destination: SignUpView(userManager: self.userManager)) {
                     Text("Create Account")
                         .padding(.top, 16)
                 }
                 // パスワードリセット画面へ遷移
-                NavigationLink(destination: ResetPasswordView(viewModel: self.viewModel)) {
+                NavigationLink(destination: ResetPasswordView(userManager: self.userManager)) {
                     Text("Reset Password")
                         .padding(.top, 16)
                 }

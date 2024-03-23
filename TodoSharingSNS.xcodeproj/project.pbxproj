@@ -11,8 +11,8 @@
 		5283BB972BAC786C00D0C6AF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5283BB962BAC786C00D0C6AF /* GoogleService-Info.plist */; };
 		5283BB9B2BAC7B6100D0C6AF /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5283BB9A2BAC7B6100D0C6AF /* FirebaseAnalytics */; };
 		5283BB9D2BAC7B6A00D0C6AF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5283BB9C2BAC7B6A00D0C6AF /* FirebaseAuth */; };
-		5283BBA02BAD9D8600D0C6AF /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283BB9F2BAD9D8600D0C6AF /* AuthViewModel.swift */; };
-		5283BBA32BADAA7000D0C6AF /* LoggedInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283BBA22BADAA7000D0C6AF /* LoggedInView.swift */; };
+		5283BBA02BAD9D8600D0C6AF /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283BB9F2BAD9D8600D0C6AF /* UserManager.swift */; };
+		5283BBA32BADAA7000D0C6AF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283BBA22BADAA7000D0C6AF /* HomeView.swift */; };
 		5283BBA52BADAAD100D0C6AF /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283BBA42BADAAD100D0C6AF /* SignInView.swift */; };
 		5283BBA72BADAB0E00D0C6AF /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283BBA62BADAB0E00D0C6AF /* SignUpView.swift */; };
 		5283BBA92BADABD400D0C6AF /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283BBA82BADABD400D0C6AF /* ResetPasswordView.swift */; };
@@ -46,8 +46,8 @@
 /* Begin PBXFileReference section */
 		5283BB922BAC5B8B00D0C6AF /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		5283BB962BAC786C00D0C6AF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		5283BB9F2BAD9D8600D0C6AF /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
-		5283BBA22BADAA7000D0C6AF /* LoggedInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInView.swift; sourceTree = "<group>"; };
+		5283BB9F2BAD9D8600D0C6AF /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		5283BBA22BADAA7000D0C6AF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		5283BBA42BADAAD100D0C6AF /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		5283BBA62BADAB0E00D0C6AF /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		5283BBA82BADABD400D0C6AF /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
@@ -98,39 +98,39 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5283BB9E2BAD9D7700D0C6AF /* ViewModel */ = {
+		5283BB9E2BAD9D7700D0C6AF /* ObservableObject */ = {
 			isa = PBXGroup;
 			children = (
-				5283BB9F2BAD9D8600D0C6AF /* AuthViewModel.swift */,
+				5283BB9F2BAD9D8600D0C6AF /* UserManager.swift */,
 			);
-			path = ViewModel;
+			path = ObservableObject;
 			sourceTree = "<group>";
 		};
 		5283BBA12BADA9F500D0C6AF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5283BBAF2BAEFCD000D0C6AF /* Authentication */,
-				5283BBB02BAEFCEB00D0C6AF /* LoggedIn */,
+				5283BBAF2BAEFCD000D0C6AF /* BeforeSignIn */,
+				5283BBB02BAEFCEB00D0C6AF /* AfterSignIn */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		5283BBAF2BAEFCD000D0C6AF /* Authentication */ = {
+		5283BBAF2BAEFCD000D0C6AF /* BeforeSignIn */ = {
 			isa = PBXGroup;
 			children = (
 				5283BBA42BADAAD100D0C6AF /* SignInView.swift */,
 				5283BBA62BADAB0E00D0C6AF /* SignUpView.swift */,
 				5283BBA82BADABD400D0C6AF /* ResetPasswordView.swift */,
 			);
-			path = Authentication;
+			path = BeforeSignIn;
 			sourceTree = "<group>";
 		};
-		5283BBB02BAEFCEB00D0C6AF /* LoggedIn */ = {
+		5283BBB02BAEFCEB00D0C6AF /* AfterSignIn */ = {
 			isa = PBXGroup;
 			children = (
-				5283BBA22BADAA7000D0C6AF /* LoggedInView.swift */,
+				5283BBA22BADAA7000D0C6AF /* HomeView.swift */,
 			);
-			path = LoggedIn;
+			path = AfterSignIn;
 			sourceTree = "<group>";
 		};
 		52A000012BA5B87A00832A2D /* TodoSharingSNSTests */ = {
@@ -181,7 +181,7 @@
 				5283BB922BAC5B8B00D0C6AF /* Todo.swift */,
 				5283BBB12BAF0A1300D0C6AF /* User.swift */,
 				5283BBA12BADA9F500D0C6AF /* View */,
-				5283BB9E2BAD9D7700D0C6AF /* ViewModel */,
+				5283BB9E2BAD9D7700D0C6AF /* ObservableObject */,
 				52A0FFF72BA5B87A00832A2D /* Preview Content */,
 			);
 			path = TodoSharingSNS;
@@ -344,8 +344,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5283BBA02BAD9D8600D0C6AF /* AuthViewModel.swift in Sources */,
-				5283BBA32BADAA7000D0C6AF /* LoggedInView.swift in Sources */,
+				5283BBA02BAD9D8600D0C6AF /* UserManager.swift in Sources */,
+				5283BBA32BADAA7000D0C6AF /* HomeView.swift in Sources */,
 				5283BB932BAC5B8B00D0C6AF /* Todo.swift in Sources */,
 				5283BBA92BADABD400D0C6AF /* ResetPasswordView.swift in Sources */,
 				5283BBB22BAF0A1300D0C6AF /* User.swift in Sources */,

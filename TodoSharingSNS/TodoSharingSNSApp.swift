@@ -21,15 +21,15 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 struct TodoSharingSNSApp: App {
     // register app delegate for Firebase setup
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    @StateObject var viewModel = AuthViewModel()
+    @StateObject var userManager = UserManager()
     
     var body: some Scene {
         WindowGroup {
             // ログイン状態によって画面遷移するページを変更する
-            if self.viewModel.isAuthenticated {
-                LoggedInView(viewModel: self.viewModel)
+            if self.userManager.isAuthenticated {
+                HomeView(userManager: self.userManager)
             } else {
-                SignInView(viewModel: self.viewModel)
+                SignInView(userManager: self.userManager)
             }
         }
     }

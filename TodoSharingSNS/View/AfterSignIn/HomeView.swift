@@ -1,5 +1,5 @@
 //
-//  LoggedInView.swift
+//  HomeView.swift
 //  TodoSharingSNS
 //
 //  Created by Taichi on 2024/03/22.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct LoggedInView: View {
-    var viewModel: AuthViewModel
+struct HomeView: View {
+    var userManager: UserManager
     
     var body: some View {
         VStack {
@@ -16,7 +16,7 @@ struct LoggedInView: View {
                 .font(.title)
                 .padding()
             Button("Log Out") {
-                self.viewModel.signOut()
+                self.userManager.signOut()
             }
         }
     }

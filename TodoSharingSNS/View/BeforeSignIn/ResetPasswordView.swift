@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ResetPasswordView: View {
     @State private var email: String = ""
-    @ObservedObject var viewModel: AuthViewModel
+    @ObservedObject var userManager: UserManager
     
     var body: some View {
         VStack {
@@ -18,7 +18,7 @@ struct ResetPasswordView: View {
                 .padding()
             
             Button("Reset Password") {
-                self.viewModel.resetPassword(email: self.email)
+                self.userManager.resetPassword(email: self.email)
             }
         }
     }

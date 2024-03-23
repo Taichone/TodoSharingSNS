@@ -10,7 +10,7 @@ import SwiftUI
 struct SignUpView: View {
     @State private var email: String = ""
     @State private var password: String = ""
-    @ObservedObject var viewModel: AuthViewModel
+    @ObservedObject var userManager: UserManager
     
     var body: some View {
         VStack {
@@ -23,7 +23,7 @@ struct SignUpView: View {
                 .padding()
             
             Button("Sign Up") {
-                self.viewModel.signUp(email: self.email, password: self.password)
+                self.userManager.signUp(email: self.email, password: self.password)
             }
         }
     }
