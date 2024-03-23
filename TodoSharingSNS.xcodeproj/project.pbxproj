@@ -107,12 +107,28 @@
 		5283BBA12BADA9F500D0C6AF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5283BBAF2BAEFCD000D0C6AF /* Authentication */,
+				5283BBB02BAEFCEB00D0C6AF /* LoggedIn */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5283BBAF2BAEFCD000D0C6AF /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
 				5283BBA42BADAAD100D0C6AF /* SignInView.swift */,
 				5283BBA62BADAB0E00D0C6AF /* SignUpView.swift */,
 				5283BBA82BADABD400D0C6AF /* ResetPasswordView.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		5283BBB02BAEFCEB00D0C6AF /* LoggedIn */ = {
+			isa = PBXGroup;
+			children = (
 				5283BBA22BADAA7000D0C6AF /* LoggedInView.swift */,
 			);
-			path = View;
+			path = LoggedIn;
 			sourceTree = "<group>";
 		};
 		52A000012BA5B87A00832A2D /* TodoSharingSNSTests */ = {

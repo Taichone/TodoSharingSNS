@@ -27,17 +27,12 @@ struct SignInView: View {
                     self.viewModel.signIn(email: self.email, password: self.password)
                 }
                 
-                if self.viewModel.isAuthenticated {
-                    // ログイン後のページに遷移
-                    LoggedInView(viewModel: self.viewModel)
-                }
-                
-                // 新規登録画面への遷移ボタン
+                // 新規登録画面へ遷移
                 NavigationLink(destination: SignUpView(viewModel: self.viewModel)) {
                     Text("Create Account")
                         .padding(.top, 16)
                 }
-                // パスワードのリセットページへ移動する
+                // パスワードリセット画面へ遷移
                 NavigationLink(destination: ResetPasswordView(viewModel: self.viewModel)) {
                     Text("Reset Password")
                         .padding(.top, 16)

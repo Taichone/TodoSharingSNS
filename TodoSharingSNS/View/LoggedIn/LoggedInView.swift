@@ -16,7 +16,6 @@ struct LoggedInView: View {
                 .font(.title)
                 .padding()
             Button("Log Out") {
-                // ログアウトしてログイン画面へ遷移する
                 self.viewModel.signOut()
             }
         }
