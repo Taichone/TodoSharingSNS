@@ -12,7 +12,7 @@ class AuthViewModel: ObservableObject {
     @Published var isAuthenticated = false
     /// - アプリの起動時に認証状態をチェック
     init() {
-        observeAuthChanges()
+        self.observeAuthChanges()
     }
     
     private func observeAuthChanges() {

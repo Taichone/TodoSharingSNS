@@ -15,30 +15,30 @@ struct SignInView: View {
     var body: some View {
         NavigationView {
             VStack {
-                TextField("Email", text: $email)
+                TextField("Email", text: self.$email)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
                 
-                SecureField("Password", text: $password)
+                SecureField("Password", text: self.$password)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
                 
                 Button("Sign In") {
-                    viewModel.signIn(email: email, password: password)
+                    self.viewModel.signIn(email: self.email, password: self.password)
                 }
                 
-                if viewModel.isAuthenticated {
+                if self.viewModel.isAuthenticated {
                     // ログイン後のページに遷移
-                    LoggedInView(viewModel: viewModel)
+                    LoggedInView(viewModel: self.viewModel)
                 }
                 
                 // 新規登録画面への遷移ボタン
-                NavigationLink(destination: SignUpView(viewModel: viewModel)) {
+                NavigationLink(destination: SignUpView(viewModel: self.viewModel)) {
                     Text("Create Account")
                         .padding(.top, 16)
                 }
                 // パスワードのリセットページへ移動する
-                NavigationLink(destination: ResetPasswordView(viewModel: viewModel)) {
+                NavigationLink(destination: ResetPasswordView(viewModel: self.viewModel)) {
                     Text("Reset Password")
                         .padding(.top, 16)
                 }

@@ -26,10 +26,10 @@ struct TodoSharingSNSApp: App {
     var body: some Scene {
         WindowGroup {
             // ログイン状態によって画面遷移するページを変更する
-            if viewModel.isAuthenticated {
-                LoggedInView(viewModel: viewModel)
+            if self.viewModel.isAuthenticated {
+                LoggedInView(viewModel: self.viewModel)
             } else {
-                SignInView(viewModel: viewModel)
+                SignInView(viewModel: self.viewModel)
             }
         }
     }
