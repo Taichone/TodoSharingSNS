@@ -9,7 +9,10 @@ import SwiftUI
 import FirebaseAuth
 
 class AuthViewModel: ObservableObject {
-    @Published var isAuthenticated = false
+    @Published var currentUid: String?
+    var isAuthenticated: Bool {
+        return self.currentUid != nil
+    }
     /// - アプリの起動時に認証状態をチェック
     init() {
         self.observeAuthChanges()
@@ -18,7 +21,9 @@ class AuthViewModel: ObservableObject {
     private func observeAuthChanges() {
         Auth.auth().addStateDidChangeListener { [weak self] _, user in
             DispatchQueue.main.async {
-                self?.isAuthenticated = user != nil
+                if let user = user {
+                    self?.currentUid = user.uid
+                }
             }
         }
     }
@@ -27,8 +32,8 @@ class AuthViewModel: ObservableObject {
     func signIn(email: String, password: String) {
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] result, error in
             DispatchQueue.main.async {
-                if result != nil, error == nil {
-                    self?.isAuthenticated = true
+                if let result = result, error == nil {
+                    self?.currentUid = result.user.uid // 同様の処理が Listener で発火するので不要かも
                 }
             }
         }
@@ -38,8 +43,8 @@ class AuthViewModel: ObservableObject {
     func signUp(email: String, password: String) {
         Auth.auth().createUser(withEmail: email, password: password) { [weak self] result, error in
             DispatchQueue.main.async {
-                if result != nil, error == nil {
-                    self?.isAuthenticated = true
+                if let result = result, error == nil {
+                    self?.currentUid = result.user.uid // 同様の処理が Listener で発火するので不要かも
                 }
             }
         }
@@ -58,7 +63,7 @@ class AuthViewModel: ObservableObject {
     func signOut() {
         do {
             try Auth.auth().signOut()
-            self.isAuthenticated = false
+            self.currentUid = nil
         } catch let signOutError as NSError {
             print("Error signing out: %@", signOutError)
         }
