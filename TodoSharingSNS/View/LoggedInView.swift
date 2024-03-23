@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LoggedInView: View {
     var viewModel: AuthViewModel
-
+    
     var body: some View {
         VStack {
             Text("You're logged in.")

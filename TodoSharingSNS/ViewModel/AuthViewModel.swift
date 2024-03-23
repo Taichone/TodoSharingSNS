@@ -25,14 +25,14 @@ class AuthViewModel: ObservableObject {
     
     /// Sign in to your existing account
     func signIn(email: String, password: String) {
-            Auth.auth().signIn(withEmail: email, password: password) { [weak self] result, error in
-                DispatchQueue.main.async {
-                    if result != nil, error == nil {
-                        self?.isAuthenticated = true
-                    }
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] result, error in
+            DispatchQueue.main.async {
+                if result != nil, error == nil {
+                    self?.isAuthenticated = true
                 }
             }
         }
+    }
     
     /// Create a new account
     func signUp(email: String, password: String) {
@@ -56,11 +56,11 @@ class AuthViewModel: ObservableObject {
     
     /// Sign out
     func signOut() {
-            do {
-                try Auth.auth().signOut()
-                self.isAuthenticated = false
-            } catch let signOutError as NSError {
-                print("Error signing out: %@", signOutError)
-            }
+        do {
+            try Auth.auth().signOut()
+            self.isAuthenticated = false
+        } catch let signOutError as NSError {
+            print("Error signing out: %@", signOutError)
         }
+    }
 }
