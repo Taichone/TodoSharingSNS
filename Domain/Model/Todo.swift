@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Todo {
+public struct Todo {
     let id = UUID().uuidString // TODO: Firebase の @DocumentID を検討
     var title: String
     var completed: Bool

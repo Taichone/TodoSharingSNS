@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct User {
+public struct User {
     let uid: String
     var todoList: [Todo]?
 }

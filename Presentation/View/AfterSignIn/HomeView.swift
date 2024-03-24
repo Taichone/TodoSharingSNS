@@ -15,8 +15,11 @@ struct HomeView: View {
         TabView(selection: self.$selectedTab) {
             Text("Friend List View").tabItem { Image(systemName: "person.2.fill") }.tag(1)
             Text("My Todo List View").tabItem { Image(systemName: "list.bullet") }.tag(2)
-            Button("Log Out") {
-                self.userManager.signOut()
+            VStack {
+                Text(self.userManager.currentUid ?? "uid: nil")
+                Button("Log Out") {
+                    self.userManager.signOut()
+                }
             }.tabItem { Image(systemName: "gear") }.tag(3)
         }
     }
