@@ -21,11 +21,10 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 struct TodoSharingSNSApp: App {
     // register app delegate for Firebase setup
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    @StateObject var userManager = UserManager()
     
     var body: some Scene {
         WindowGroup {
-            RootView(userManager: self.userManager)
+            RootView(viewModel: RootViewModel())
         }
     }
 }
