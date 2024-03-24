@@ -9,28 +9,23 @@ import SwiftUI
 import FirebaseCore
 
 class AppDelegate: NSObject, UIApplicationDelegate {
-  func application(_ application: UIApplication,
-                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-    FirebaseApp.configure()
-
-    return true
-  }
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        FirebaseApp.configure()
+        
+        return true
+    }
 }
 
 @main
 struct TodoSharingSNSApp: App {
     // register app delegate for Firebase setup
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    @StateObject var viewModel = AuthViewModel()
-
+    @StateObject var userManager = UserManager()
+    
     var body: some Scene {
         WindowGroup {
-            // ログイン状態によって画面遷移するページを変更する
-            if viewModel.isAuthenticated {
-                LoggedInView(viewModel: viewModel)
-            } else {
-                SignInView(viewModel: viewModel)
-            }
+            RootView(userManager: self.userManager)
         }
     }
 }
