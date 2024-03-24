@@ -18,6 +18,7 @@
 		5283BBA92BADABD400D0C6AF /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283BBA82BADABD400D0C6AF /* ResetPasswordView.swift */; };
 		5283BBAB2BAEA97100D0C6AF /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5283BBAA2BAEA97100D0C6AF /* Localizable.xcstrings */; };
 		5283BBB22BAF0A1300D0C6AF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283BBB12BAF0A1300D0C6AF /* User.swift */; };
+		5283BBBC2BAFE5AB00D0C6AF /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283BBBB2BAFE5AB00D0C6AF /* RootView.swift */; };
 		52A000032BA5B87A00832A2D /* TodoSharingSNSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A000022BA5B87A00832A2D /* TodoSharingSNSTests.swift */; };
 		52A0000D2BA5B87A00832A2D /* TodoSharingSNSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0000C2BA5B87A00832A2D /* TodoSharingSNSUITests.swift */; };
 		52A0000F2BA5B87A00832A2D /* TodoSharingSNSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0000E2BA5B87A00832A2D /* TodoSharingSNSUITestsLaunchTests.swift */; };
@@ -53,6 +54,7 @@
 		5283BBA82BADABD400D0C6AF /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
 		5283BBAA2BAEA97100D0C6AF /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		5283BBB12BAF0A1300D0C6AF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5283BBBB2BAFE5AB00D0C6AF /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		52A000022BA5B87A00832A2D /* TodoSharingSNSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoSharingSNSTests.swift; sourceTree = "<group>"; };
 		52A000082BA5B87A00832A2D /* TodoSharingSNSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoSharingSNSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52A0000C2BA5B87A00832A2D /* TodoSharingSNSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoSharingSNSUITests.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 		5283BBA12BADA9F500D0C6AF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5283BBBA2BAFE58400D0C6AF /* Root */,
 				5283BBAF2BAEFCD000D0C6AF /* BeforeSignIn */,
 				5283BBB02BAEFCEB00D0C6AF /* AfterSignIn */,
 			);
@@ -179,6 +182,14 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5283BBBA2BAFE58400D0C6AF /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				5283BBBB2BAFE5AB00D0C6AF /* RootView.swift */,
+			);
+			path = Root;
 			sourceTree = "<group>";
 		};
 		52A000012BA5B87A00832A2D /* TodoSharingSNSTests */ = {
@@ -397,6 +408,7 @@
 				5283BB932BAC5B8B00D0C6AF /* Todo.swift in Sources */,
 				5283BBA92BADABD400D0C6AF /* ResetPasswordView.swift in Sources */,
 				5283BBB22BAF0A1300D0C6AF /* User.swift in Sources */,
+				5283BBBC2BAFE5AB00D0C6AF /* RootView.swift in Sources */,
 				52A0FFF02BA5B87900832A2D /* TodoSharingSNSApp.swift in Sources */,
 				5283BBA72BADAB0E00D0C6AF /* SignUpView.swift in Sources */,
 				5283BBA52BADAAD100D0C6AF /* SignInView.swift in Sources */,

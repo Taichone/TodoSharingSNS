@@ -25,12 +25,7 @@ struct TodoSharingSNSApp: App {
     
     var body: some Scene {
         WindowGroup {
-            // ログイン状態によって画面遷移するページを変更する
-            if self.userManager.isAuthenticated {
-                HomeView(userManager: self.userManager)
-            } else {
-                SignInView(userManager: self.userManager)
-            }
+            RootView(userManager: self.userManager)
         }
     }
 }
