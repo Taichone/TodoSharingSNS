@@ -19,6 +19,10 @@
 		5283BBAB2BAEA97100D0C6AF /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5283BBAA2BAEA97100D0C6AF /* Localizable.xcstrings */; };
 		5283BBB22BAF0A1300D0C6AF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283BBB12BAF0A1300D0C6AF /* User.swift */; };
 		5283BBBC2BAFE5AB00D0C6AF /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283BBBB2BAFE5AB00D0C6AF /* RootView.swift */; };
+		5283BBC02BB0134100D0C6AF /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283BBBF2BB0134100D0C6AF /* HomeViewModel.swift */; };
+		5283BBC32BB0511900D0C6AF /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283BBC22BB0511900D0C6AF /* UserRepository.swift */; };
+		5283BBC52BB0512900D0C6AF /* TodoListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283BBC42BB0512900D0C6AF /* TodoListRepository.swift */; };
+		5283BBC72BB0536000D0C6AF /* FirestoreDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283BBC62BB0536000D0C6AF /* FirestoreDataSource.swift */; };
 		52A000032BA5B87A00832A2D /* TodoSharingSNSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A000022BA5B87A00832A2D /* TodoSharingSNSTests.swift */; };
 		52A0000D2BA5B87A00832A2D /* TodoSharingSNSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0000C2BA5B87A00832A2D /* TodoSharingSNSUITests.swift */; };
 		52A0000F2BA5B87A00832A2D /* TodoSharingSNSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0000E2BA5B87A00832A2D /* TodoSharingSNSUITestsLaunchTests.swift */; };
@@ -55,6 +59,10 @@
 		5283BBAA2BAEA97100D0C6AF /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		5283BBB12BAF0A1300D0C6AF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5283BBBB2BAFE5AB00D0C6AF /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		5283BBBF2BB0134100D0C6AF /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		5283BBC22BB0511900D0C6AF /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		5283BBC42BB0512900D0C6AF /* TodoListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListRepository.swift; sourceTree = "<group>"; };
+		5283BBC62BB0536000D0C6AF /* FirestoreDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDataSource.swift; sourceTree = "<group>"; };
 		52A000022BA5B87A00832A2D /* TodoSharingSNSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoSharingSNSTests.swift; sourceTree = "<group>"; };
 		52A000082BA5B87A00832A2D /* TodoSharingSNSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoSharingSNSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52A0000C2BA5B87A00832A2D /* TodoSharingSNSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoSharingSNSUITests.swift; sourceTree = "<group>"; };
@@ -104,20 +112,9 @@
 			isa = PBXGroup;
 			children = (
 				5283BBBA2BAFE58400D0C6AF /* Root */,
-				5283BBAF2BAEFCD000D0C6AF /* BeforeSignIn */,
 				5283BBB02BAEFCEB00D0C6AF /* AfterSignIn */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		5283BBAF2BAEFCD000D0C6AF /* BeforeSignIn */ = {
-			isa = PBXGroup;
-			children = (
-				5283BBA42BADAAD100D0C6AF /* SignInView.swift */,
-				5283BBA62BADAB0E00D0C6AF /* SignUpView.swift */,
-				5283BBA82BADABD400D0C6AF /* ResetPasswordView.swift */,
-			);
-			path = BeforeSignIn;
 			sourceTree = "<group>";
 		};
 		5283BBB02BAEFCEB00D0C6AF /* AfterSignIn */ = {
@@ -131,6 +128,7 @@
 		5283BBB32BAFE19900D0C6AF /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				5283BBC12BB050FD00D0C6AF /* Repository */,
 				5283BBB52BAFE29D00D0C6AF /* Model */,
 				5283BBB62BAFE2B100D0C6AF /* UseCase */,
 			);
@@ -140,7 +138,7 @@
 		5283BBB42BAFE1A200D0C6AF /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
-				5283BBB72BAFE2E400D0C6AF /* Gateway */,
+				5283BBC62BB0536000D0C6AF /* FirestoreDataSource.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -161,13 +159,6 @@
 			path = UseCase;
 			sourceTree = "<group>";
 		};
-		5283BBB72BAFE2E400D0C6AF /* Gateway */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Gateway;
-			sourceTree = "<group>";
-		};
 		5283BBB82BAFE30600D0C6AF /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				5283BBBD2BB011B400D0C6AF /* Root */,
+				5283BBBE2BB0130100D0C6AF /* AfterSignIn */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -189,6 +181,9 @@
 			isa = PBXGroup;
 			children = (
 				5283BBBB2BAFE5AB00D0C6AF /* RootView.swift */,
+				5283BBA42BADAAD100D0C6AF /* SignInView.swift */,
+				5283BBA62BADAB0E00D0C6AF /* SignUpView.swift */,
+				5283BBA82BADABD400D0C6AF /* ResetPasswordView.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -199,6 +194,23 @@
 				5283BB9F2BAD9D8600D0C6AF /* RootViewModel.swift */,
 			);
 			path = Root;
+			sourceTree = "<group>";
+		};
+		5283BBBE2BB0130100D0C6AF /* AfterSignIn */ = {
+			isa = PBXGroup;
+			children = (
+				5283BBBF2BB0134100D0C6AF /* HomeViewModel.swift */,
+			);
+			path = AfterSignIn;
+			sourceTree = "<group>";
+		};
+		5283BBC12BB050FD00D0C6AF /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				5283BBC22BB0511900D0C6AF /* UserRepository.swift */,
+				5283BBC42BB0512900D0C6AF /* TodoListRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 		52A000012BA5B87A00832A2D /* TodoSharingSNSTests */ = {
@@ -411,9 +423,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5283BBC72BB0536000D0C6AF /* FirestoreDataSource.swift in Sources */,
+				5283BBC32BB0511900D0C6AF /* UserRepository.swift in Sources */,
+				5283BBC52BB0512900D0C6AF /* TodoListRepository.swift in Sources */,
 				5283BBA02BAD9D8600D0C6AF /* RootViewModel.swift in Sources */,
 				5283BBA32BADAA7000D0C6AF /* HomeView.swift in Sources */,
 				5283BB932BAC5B8B00D0C6AF /* Todo.swift in Sources */,
+				5283BBC02BB0134100D0C6AF /* HomeViewModel.swift in Sources */,
 				5283BBA92BADABD400D0C6AF /* ResetPasswordView.swift in Sources */,
 				5283BBB22BAF0A1300D0C6AF /* User.swift in Sources */,
 				5283BBBC2BAFE5AB00D0C6AF /* RootView.swift in Sources */,

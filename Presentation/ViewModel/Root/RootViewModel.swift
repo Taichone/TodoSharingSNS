@@ -8,7 +8,7 @@
 import SwiftUI
 import FirebaseAuth
 
-class RootViewModel : ObservableObject {
+final class RootViewModel: ObservableObject {
     @Published var currentUid: String?
     var isAuthenticated: Bool {
         return self.currentUid != nil
