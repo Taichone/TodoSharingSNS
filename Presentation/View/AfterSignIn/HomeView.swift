@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    var userManager: UserManager
+    var viewModel: RootViewModel
     @State private var selectedTab = 1
     
     var body: some View {
@@ -16,22 +16,15 @@ struct HomeView: View {
             Text("Friend List View").tabItem { Image(systemName: "person.2.fill") }.tag(1)
             Text("My Todo List View").tabItem { Image(systemName: "list.bullet") }.tag(2)
             VStack {
-                Text(self.userManager.currentUid ?? "uid: nil")
+                Text(self.viewModel.currentUid ?? "uid: nil")
                 Button("Log Out") {
-                    self.userManager.signOut()
+                    self.viewModel.signOut()
                 }
             }.tabItem { Image(systemName: "gear") }.tag(3)
         }
     }
 }
 
-fileprivate struct HomeViewWrapper: View {
-    @State private var userManager = UserManager()
-    var body: some View {
-        HomeView(userManager: self.userManager)
-    }
-}
-
 #Preview {
-    HomeViewWrapper()
+    HomeView(viewModel: RootViewModel())
 }

@@ -1,5 +1,5 @@
 //
-//  UserManager.swift
+//  RootViewModel.swift
 //  TodoSharingSNS
 //
 //  Created by Taichi on 2024/03/22.
@@ -8,7 +8,7 @@
 import SwiftUI
 import FirebaseAuth
 
-class UserManager: ObservableObject {
+final class RootViewModel: ObservableObject {
     @Published var currentUid: String?
     var isAuthenticated: Bool {
         return self.currentUid != nil

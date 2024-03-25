@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct RootView: View {
-    @ObservedObject var userManager: UserManager
+    @ObservedObject var viewModel: RootViewModel
     
     var body: some View {
-        if self.userManager.isAuthenticated {
-            HomeView(userManager: self.userManager)
+        if self.viewModel.isAuthenticated {
+            HomeView(viewModel: self.viewModel)
         } else {
-            SignInView(userManager: self.userManager)
+            SignInView(viewModel: self.viewModel)
         }
     }
 }
 
 #Preview {
-    RootView(userManager: UserManager())
+    RootView(viewModel: RootViewModel())
 }
