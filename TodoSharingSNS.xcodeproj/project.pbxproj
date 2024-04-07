@@ -33,6 +33,7 @@
 		528BFF052BC1A51700F8F3FB /* CreateUsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528BFF042BC1A51700F8F3FB /* CreateUsernameView.swift */; };
 		528BFF072BC1A53200F8F3FB /* CreatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528BFF062BC1A53200F8F3FB /* CreatePasswordView.swift */; };
 		528BFF092BC1A55600F8F3FB /* CompleteSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528BFF082BC1A55600F8F3FB /* CompleteSignUpView.swift */; };
+		528BFF0D2BC2DDF900F8F3FB /* CurrentUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528BFF0C2BC2DDF900F8F3FB /* CurrentUserProfileView.swift */; };
 		52A000032BA5B87A00832A2D /* TodoSharingSNSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A000022BA5B87A00832A2D /* TodoSharingSNSTests.swift */; };
 		52A0000D2BA5B87A00832A2D /* TodoSharingSNSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0000C2BA5B87A00832A2D /* TodoSharingSNSUITests.swift */; };
 		52A0000F2BA5B87A00832A2D /* TodoSharingSNSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0000E2BA5B87A00832A2D /* TodoSharingSNSUITestsLaunchTests.swift */; };
@@ -83,6 +84,7 @@
 		528BFF042BC1A51700F8F3FB /* CreateUsernameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsernameView.swift; sourceTree = "<group>"; };
 		528BFF062BC1A53200F8F3FB /* CreatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordView.swift; sourceTree = "<group>"; };
 		528BFF082BC1A55600F8F3FB /* CompleteSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteSignUpView.swift; sourceTree = "<group>"; };
+		528BFF0C2BC2DDF900F8F3FB /* CurrentUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileView.swift; sourceTree = "<group>"; };
 		52A000022BA5B87A00832A2D /* TodoSharingSNSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoSharingSNSTests.swift; sourceTree = "<group>"; };
 		52A000082BA5B87A00832A2D /* TodoSharingSNSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoSharingSNSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52A0000C2BA5B87A00832A2D /* TodoSharingSNSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoSharingSNSUITests.swift; sourceTree = "<group>"; };
@@ -203,6 +205,21 @@
 			isa = PBXGroup;
 			children = (
 				528BFEFA2BC19DAB00F8F3FB /* FeedViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		528BFF0A2BC2DDDE00F8F3FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		528BFF0B2BC2DDE300F8F3FB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				528BFF0C2BC2DDF900F8F3FB /* CurrentUserProfileView.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -331,6 +348,8 @@
 		52FCD64F2BBBECA7003AD746 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				528BFF0A2BC2DDDE00F8F3FB /* View */,
+				528BFF0B2BC2DDE300F8F3FB /* ViewModel */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -528,6 +547,7 @@
 				52FCD6532BBBED3A003AD746 /* ContentView.swift in Sources */,
 				528BFEE82BC0F0B400F8F3FB /* RegistrationViewModel.swift in Sources */,
 				528BFEF32BC0F67000F8F3FB /* AddEmailView.swift in Sources */,
+				528BFF0D2BC2DDF900F8F3FB /* CurrentUserProfileView.swift in Sources */,
 				528BFEF12BC0F53400F8F3FB /* LoginViewModel.swift in Sources */,
 				528BFEF52BC0F73200F8F3FB /* TextFieldModifier.swift in Sources */,
 				5283BBA32BADAA7000D0C6AF /* MainTabView.swift in Sources */,

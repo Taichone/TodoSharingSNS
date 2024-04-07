@@ -48,8 +48,7 @@ struct MainTabView: View {
                     Image(systemName: "heart")
                 }.tag(3)
 
-            // TODO: - CurrentUserProfileView(user: self.user)
-            Text("Current User Profile")
+             CurrentUserProfileView(user: self.user)
                 .onAppear {
                     self.selectedIndex = 4
                 }

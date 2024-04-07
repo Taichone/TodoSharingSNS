@@ -52,7 +52,8 @@ struct LoginView: View {
                         .clipShape(RoundedRectangle(cornerSize: CGSize(width: 10, height: 10)))
                 }
                 .padding(.vertical)
-
+                
+                // --- OR --
                 HStack {
                     Rectangle()
                         .frame(width: (UIScreen.main.bounds.width / 2) - 40, height: 0.5)
@@ -65,30 +66,26 @@ struct LoginView: View {
                         .frame(width: (UIScreen.main.bounds.width / 2) - 40, height: 0.5)
                         .foregroundStyle(.gray)
                 }
-
-                Text("Continue with Facebook")
+                
+                Text("Don't have an account?")
                     .font(.footnote)
                     .fontWeight(.semibold)
-                    .foregroundStyle(Color(.systemBlue))
-                    .padding(.top, 8)
-
-                Spacer()
-
-                Divider()
+                    .foregroundStyle(.gray)
 
                 NavigationLink {
                     AddEmailView()
                         .navigationBarBackButtonHidden() // あえて練習のため
                 } label: {
-                    HStack(spacing: 3) {
-                        Text("Don't have an account?")
-
-                        Text("Sign Up")
-                            .fontWeight(.semibold)
-                    }
-                    .font(.footnote)
+                    Text("Create Account")
+                        .font(.subheadline)
+                        .fontWeight(.semibold)
+                        .foregroundStyle(.white)
+                        .frame(width:360, height: 44)
+                        .background(Color(.systemBlue))
+                        .clipShape(RoundedRectangle(cornerSize: CGSize(width: 10, height: 10)))
                 }
-                .padding(.vertical, 16)
+                
+                Spacer()
             }
         }
     }
