@@ -29,8 +29,7 @@ struct AddEmailView: View {
                 .modifier(TextFieldModifier())
 
             NavigationLink {
-                // TODO: - CreateUsernameView()
-                Text("Create Username")
+                CreateUsernameView()
                     .navigationBarBackButtonHidden()
             } label: {
                 Text("Next")

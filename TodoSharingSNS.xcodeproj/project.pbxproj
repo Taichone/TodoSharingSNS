@@ -255,8 +255,8 @@
 				5283BBB82BAFE30600D0C6AF /* Core */,
 				5283BBB42BAFE1A200D0C6AF /* Infrastructure */,
 				5283BBB52BAFE29D00D0C6AF /* Model */,
-				52A0FFF72BA5B87A00832A2D /* Preview Content */,
 				528BFEED2BC0F13F00F8F3FB /* Service */,
+				52A0FFF72BA5B87A00832A2D /* Preview Content */,
 			);
 			path = TodoSharingSNS;
 			sourceTree = "<group>";

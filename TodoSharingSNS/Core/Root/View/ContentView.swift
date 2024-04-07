@@ -20,15 +20,8 @@ struct ContentView: View {
                 MainTabView(user: currentUser)
             } else {
                 Text("DEBUG: userSession isn't nil, but currentUser is nil")
-                    .onAppear {
-                        self.printError()
-                    }
             }
         }
-    }
-    
-    func printError() {
-        print("DEBUG: userSession isn't nil, but currentUser is nil")
     }
 }
 
