@@ -1,0 +1,200 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@ " : {
+
+    },
+    "%lld likes" : {
+
+    },
+    "6h ago" : {
+
+    },
+    "Add your email" : {
+
+    },
+    "Click below to complete registration and start using iMana" : {
+
+    },
+    "Complete sign up" : {
+
+    },
+    "Continue with Facebook" : {
+
+    },
+    "Create a password" : {
+
+    },
+    "Create Account" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アカウント作成"
+          }
+        }
+      }
+    },
+    "Create username" : {
+
+    },
+    "Create Username" : {
+
+    },
+    "Current User Profile" : {
+
+    },
+    "DEBUG: userSession isn't nil, but currentUser is nil" : {
+
+    },
+    "Don't have an account?" : {
+
+    },
+    "Email" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "メールアドレス"
+          }
+        }
+      }
+    },
+    "Enter your email" : {
+
+    },
+    "Enter your password" : {
+
+    },
+    "Feed" : {
+
+    },
+    "Forgot Password" : {
+
+    },
+    "Friend List View" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "友達リスト"
+          }
+        }
+      }
+    },
+    "iMana" : {
+
+    },
+    "Log Out" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ログアウト"
+          }
+        }
+      }
+    },
+    "Login" : {
+
+    },
+    "My Todo List View" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自分のTodoリスト"
+          }
+        }
+      }
+    },
+    "Next" : {
+
+    },
+    "Notifications" : {
+
+    },
+    "OR" : {
+
+    },
+    "Password" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "パスワード"
+          }
+        }
+      }
+    },
+    "Pick a username for your new account. You can always change it later" : {
+
+    },
+    "Reset Password" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "パスワードをリセット"
+          }
+        }
+      }
+    },
+    "Search" : {
+
+    },
+    "Sign In" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "サインイン"
+          }
+        }
+      }
+    },
+    "Sign Up" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "サインアップ"
+          }
+        }
+      }
+    },
+    "Upload Post" : {
+
+    },
+    "Username" : {
+
+    },
+    "Welcome to iMana, %@" : {
+
+    },
+    "You'll use this email to sign in to your account" : {
+
+    },
+    "You're logged in." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ログインに成功しました。"
+          }
+        }
+      }
+    },
+    "Your password must be at least 6 characters in length" : {
+
+    }
+  },
+  "version" : "1.0"
+}

@@ -1,0 +1,899 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5283BB932BAC5B8B00D0C6AF /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283BB922BAC5B8B00D0C6AF /* Todo.swift */; };
+		5283BB972BAC786C00D0C6AF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5283BB962BAC786C00D0C6AF /* GoogleService-Info.plist */; };
+		5283BB9B2BAC7B6100D0C6AF /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5283BB9A2BAC7B6100D0C6AF /* FirebaseAnalytics */; };
+		5283BB9D2BAC7B6A00D0C6AF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5283BB9C2BAC7B6A00D0C6AF /* FirebaseAuth */; };
+		5283BBA32BADAA7000D0C6AF /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283BBA22BADAA7000D0C6AF /* MainTabView.swift */; };
+		5283BBA72BADAB0E00D0C6AF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283BBA62BADAB0E00D0C6AF /* LoginView.swift */; };
+		5283BBAB2BAEA97100D0C6AF /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5283BBAA2BAEA97100D0C6AF /* Localizable.xcstrings */; };
+		5283BBB22BAF0A1300D0C6AF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283BBB12BAF0A1300D0C6AF /* User.swift */; };
+		5283BBC02BB0134100D0C6AF /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283BBBF2BB0134100D0C6AF /* HomeViewModel.swift */; };
+		5283BBC72BB0536000D0C6AF /* FirestoreDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283BBC62BB0536000D0C6AF /* FirestoreDataSource.swift */; };
+		528BFEE62BC0F04D00F8F3FB /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528BFEE52BC0F04D00F8F3FB /* AuthService.swift */; };
+		528BFEE82BC0F0B400F8F3FB /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528BFEE72BC0F0B400F8F3FB /* RegistrationViewModel.swift */; };
+		528BFEEA2BC0F0E400F8F3FB /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 528BFEE92BC0F0E400F8F3FB /* FirebaseFirestoreSwift */; };
+		528BFEEC2BC0F0F200F8F3FB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 528BFEEB2BC0F0F200F8F3FB /* FirebaseFirestore */; };
+		528BFEEF2BC0F15500F8F3FB /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528BFEEE2BC0F15500F8F3FB /* UserService.swift */; };
+		528BFEF12BC0F53400F8F3FB /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528BFEF02BC0F53400F8F3FB /* LoginViewModel.swift */; };
+		528BFEF32BC0F67000F8F3FB /* AddEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528BFEF22BC0F67000F8F3FB /* AddEmailView.swift */; };
+		528BFEF52BC0F73200F8F3FB /* TextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528BFEF42BC0F73200F8F3FB /* TextFieldModifier.swift */; };
+		528BFEF72BC19D6000F8F3FB /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528BFEF62BC19D6000F8F3FB /* FeedView.swift */; };
+		528BFEFB2BC19DAB00F8F3FB /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528BFEFA2BC19DAB00F8F3FB /* FeedViewModel.swift */; };
+		528BFEFD2BC19E1000F8F3FB /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528BFEFC2BC19E1000F8F3FB /* Post.swift */; };
+		528BFEFF2BC19E5900F8F3FB /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528BFEFE2BC19E5900F8F3FB /* PostService.swift */; };
+		528BFF012BC19E8C00F8F3FB /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528BFF002BC19E8C00F8F3FB /* FeedCell.swift */; };
+		528BFF052BC1A51700F8F3FB /* CreateUsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528BFF042BC1A51700F8F3FB /* CreateUsernameView.swift */; };
+		528BFF072BC1A53200F8F3FB /* CreatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528BFF062BC1A53200F8F3FB /* CreatePasswordView.swift */; };
+		528BFF092BC1A55600F8F3FB /* CompleteSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528BFF082BC1A55600F8F3FB /* CompleteSignUpView.swift */; };
+		52A000032BA5B87A00832A2D /* TodoSharingSNSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A000022BA5B87A00832A2D /* TodoSharingSNSTests.swift */; };
+		52A0000D2BA5B87A00832A2D /* TodoSharingSNSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0000C2BA5B87A00832A2D /* TodoSharingSNSUITests.swift */; };
+		52A0000F2BA5B87A00832A2D /* TodoSharingSNSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0000E2BA5B87A00832A2D /* TodoSharingSNSUITestsLaunchTests.swift */; };
+		52A0FFF02BA5B87900832A2D /* TodoSharingSNSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0FFEF2BA5B87900832A2D /* TodoSharingSNSApp.swift */; };
+		52A0FFF62BA5B87A00832A2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52A0FFF52BA5B87A00832A2D /* Assets.xcassets */; };
+		52A0FFF92BA5B87A00832A2D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52A0FFF82BA5B87A00832A2D /* Preview Assets.xcassets */; };
+		52FCD6532BBBED3A003AD746 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCD6522BBBED3A003AD746 /* ContentView.swift */; };
+		52FCD6572BBBEEE8003AD746 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCD6562BBBEEE8003AD746 /* ContentViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		52A000092BA5B87A00832A2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52A0FFE42BA5B87900832A2D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52A0FFEB2BA5B87900832A2D;
+			remoteInfo = TodoSharingSNS;
+		};
+		52A0FFFF2BA5B87A00832A2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52A0FFE42BA5B87900832A2D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52A0FFEB2BA5B87900832A2D;
+			remoteInfo = TodoSharingSNS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5283BB922BAC5B8B00D0C6AF /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		5283BB962BAC786C00D0C6AF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5283BBA22BADAA7000D0C6AF /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		5283BBA62BADAB0E00D0C6AF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		5283BBAA2BAEA97100D0C6AF /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		5283BBB12BAF0A1300D0C6AF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5283BBBF2BB0134100D0C6AF /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		5283BBC62BB0536000D0C6AF /* FirestoreDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDataSource.swift; sourceTree = "<group>"; };
+		528BFEE52BC0F04D00F8F3FB /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		528BFEE72BC0F0B400F8F3FB /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		528BFEEE2BC0F15500F8F3FB /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		528BFEF02BC0F53400F8F3FB /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		528BFEF22BC0F67000F8F3FB /* AddEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmailView.swift; sourceTree = "<group>"; };
+		528BFEF42BC0F73200F8F3FB /* TextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifier.swift; sourceTree = "<group>"; };
+		528BFEF62BC19D6000F8F3FB /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		528BFEFA2BC19DAB00F8F3FB /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		528BFEFC2BC19E1000F8F3FB /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		528BFEFE2BC19E5900F8F3FB /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		528BFF002BC19E8C00F8F3FB /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		528BFF042BC1A51700F8F3FB /* CreateUsernameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsernameView.swift; sourceTree = "<group>"; };
+		528BFF062BC1A53200F8F3FB /* CreatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordView.swift; sourceTree = "<group>"; };
+		528BFF082BC1A55600F8F3FB /* CompleteSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteSignUpView.swift; sourceTree = "<group>"; };
+		52A000022BA5B87A00832A2D /* TodoSharingSNSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoSharingSNSTests.swift; sourceTree = "<group>"; };
+		52A000082BA5B87A00832A2D /* TodoSharingSNSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoSharingSNSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52A0000C2BA5B87A00832A2D /* TodoSharingSNSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoSharingSNSUITests.swift; sourceTree = "<group>"; };
+		52A0000E2BA5B87A00832A2D /* TodoSharingSNSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoSharingSNSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		52A0FFEC2BA5B87900832A2D /* TodoSharingSNS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoSharingSNS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52A0FFEF2BA5B87900832A2D /* TodoSharingSNSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoSharingSNSApp.swift; sourceTree = "<group>"; };
+		52A0FFF52BA5B87A00832A2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52A0FFF82BA5B87A00832A2D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		52A0FFFE2BA5B87A00832A2D /* TodoSharingSNSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoSharingSNSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52FCD6522BBBED3A003AD746 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		52FCD6562BBBEEE8003AD746 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52A000052BA5B87A00832A2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52A0FFE92BA5B87900832A2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5283BB9B2BAC7B6100D0C6AF /* FirebaseAnalytics in Frameworks */,
+				528BFEEC2BC0F0F200F8F3FB /* FirebaseFirestore in Frameworks */,
+				5283BB9D2BAC7B6A00D0C6AF /* FirebaseAuth in Frameworks */,
+				528BFEEA2BC0F0E400F8F3FB /* FirebaseFirestoreSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52A0FFFB2BA5B87A00832A2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5283BB992BAC7B6100D0C6AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5283BBB42BAFE1A200D0C6AF /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				5283BBC62BB0536000D0C6AF /* FirestoreDataSource.swift */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		5283BBB52BAFE29D00D0C6AF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5283BB922BAC5B8B00D0C6AF /* Todo.swift */,
+				5283BBB12BAF0A1300D0C6AF /* User.swift */,
+				528BFEFC2BC19E1000F8F3FB /* Post.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5283BBB82BAFE30600D0C6AF /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				52FCD6432BBBEBB7003AD746 /* Authentication */,
+				52FCD6452BBBEBFE003AD746 /* Components */,
+				52FCD6472BBBEC38003AD746 /* Feed */,
+				52FCD64F2BBBECA7003AD746 /* Profile */,
+				52FCD64E2BBBECA0003AD746 /* Root */,
+				52FCD64B2BBBEC42003AD746 /* Search */,
+				52FCD64D2BBBEC44003AD746 /* TabBar */,
+				52FCD64C2BBBEC43003AD746 /* UploadTodo */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		528BFEE32BC0EB3600F8F3FB /* App */ = {
+			isa = PBXGroup;
+			children = (
+				52A0FFEF2BA5B87900832A2D /* TodoSharingSNSApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		528BFEE42BC0F03900F8F3FB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				528BFEE52BC0F04D00F8F3FB /* AuthService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		528BFEED2BC0F13F00F8F3FB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				528BFEEE2BC0F15500F8F3FB /* UserService.swift */,
+				528BFEFE2BC19E5900F8F3FB /* PostService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		528BFEF82BC19D9200F8F3FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				528BFEF62BC19D6000F8F3FB /* FeedView.swift */,
+				528BFF002BC19E8C00F8F3FB /* FeedCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		528BFEF92BC19D9700F8F3FB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				528BFEFA2BC19DAB00F8F3FB /* FeedViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		52A000012BA5B87A00832A2D /* TodoSharingSNSTests */ = {
+			isa = PBXGroup;
+			children = (
+				52A000022BA5B87A00832A2D /* TodoSharingSNSTests.swift */,
+			);
+			path = TodoSharingSNSTests;
+			sourceTree = "<group>";
+		};
+		52A0000B2BA5B87A00832A2D /* TodoSharingSNSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				52A0000C2BA5B87A00832A2D /* TodoSharingSNSUITests.swift */,
+				52A0000E2BA5B87A00832A2D /* TodoSharingSNSUITestsLaunchTests.swift */,
+			);
+			path = TodoSharingSNSUITests;
+			sourceTree = "<group>";
+		};
+		52A0FFE32BA5B87900832A2D = {
+			isa = PBXGroup;
+			children = (
+				52A0FFEE2BA5B87900832A2D /* TodoSharingSNS */,
+				52A0FFF52BA5B87A00832A2D /* Assets.xcassets */,
+				5283BB962BAC786C00D0C6AF /* GoogleService-Info.plist */,
+				5283BBAA2BAEA97100D0C6AF /* Localizable.xcstrings */,
+				52A000012BA5B87A00832A2D /* TodoSharingSNSTests */,
+				52A0000B2BA5B87A00832A2D /* TodoSharingSNSUITests */,
+				52A0FFED2BA5B87900832A2D /* Products */,
+				5283BB992BAC7B6100D0C6AF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		52A0FFED2BA5B87900832A2D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52A0FFEC2BA5B87900832A2D /* TodoSharingSNS.app */,
+				52A0FFFE2BA5B87A00832A2D /* TodoSharingSNSTests.xctest */,
+				52A000082BA5B87A00832A2D /* TodoSharingSNSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52A0FFEE2BA5B87900832A2D /* TodoSharingSNS */ = {
+			isa = PBXGroup;
+			children = (
+				528BFEE32BC0EB3600F8F3FB /* App */,
+				5283BBB82BAFE30600D0C6AF /* Core */,
+				5283BBB42BAFE1A200D0C6AF /* Infrastructure */,
+				5283BBB52BAFE29D00D0C6AF /* Model */,
+				52A0FFF72BA5B87A00832A2D /* Preview Content */,
+				528BFEED2BC0F13F00F8F3FB /* Service */,
+			);
+			path = TodoSharingSNS;
+			sourceTree = "<group>";
+		};
+		52A0FFF72BA5B87A00832A2D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				52A0FFF82BA5B87A00832A2D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		52FCD6432BBBEBB7003AD746 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				52FCD6542BBBEDED003AD746 /* View */,
+				52FCD6552BBBEDF1003AD746 /* ViewModel */,
+				528BFEE42BC0F03900F8F3FB /* Service */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		52FCD6452BBBEBFE003AD746 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				528BFEF42BC0F73200F8F3FB /* TextFieldModifier.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		52FCD6472BBBEC38003AD746 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				528BFEF82BC19D9200F8F3FB /* View */,
+				528BFEF92BC19D9700F8F3FB /* ViewModel */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		52FCD64B2BBBEC42003AD746 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		52FCD64C2BBBEC43003AD746 /* UploadTodo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UploadTodo;
+			sourceTree = "<group>";
+		};
+		52FCD64D2BBBEC44003AD746 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				5283BBA22BADAA7000D0C6AF /* MainTabView.swift */,
+				5283BBBF2BB0134100D0C6AF /* HomeViewModel.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		52FCD64E2BBBECA0003AD746 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				52FCD6512BBBECEA003AD746 /* View */,
+				52FCD6502BBBECE8003AD746 /* ViewModel */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		52FCD64F2BBBECA7003AD746 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		52FCD6502BBBECE8003AD746 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				52FCD6562BBBEEE8003AD746 /* ContentViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		52FCD6512BBBECEA003AD746 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				52FCD6522BBBED3A003AD746 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		52FCD6542BBBEDED003AD746 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5283BBA62BADAB0E00D0C6AF /* LoginView.swift */,
+				528BFEF22BC0F67000F8F3FB /* AddEmailView.swift */,
+				528BFF042BC1A51700F8F3FB /* CreateUsernameView.swift */,
+				528BFF062BC1A53200F8F3FB /* CreatePasswordView.swift */,
+				528BFF082BC1A55600F8F3FB /* CompleteSignUpView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		52FCD6552BBBEDF1003AD746 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				528BFEE72BC0F0B400F8F3FB /* RegistrationViewModel.swift */,
+				528BFEF02BC0F53400F8F3FB /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		52A000072BA5B87A00832A2D /* TodoSharingSNSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52A000182BA5B87A00832A2D /* Build configuration list for PBXNativeTarget "TodoSharingSNSUITests" */;
+			buildPhases = (
+				52A000042BA5B87A00832A2D /* Sources */,
+				52A000052BA5B87A00832A2D /* Frameworks */,
+				52A000062BA5B87A00832A2D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52A0000A2BA5B87A00832A2D /* PBXTargetDependency */,
+			);
+			name = TodoSharingSNSUITests;
+			productName = TodoSharingSNSUITests;
+			productReference = 52A000082BA5B87A00832A2D /* TodoSharingSNSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		52A0FFEB2BA5B87900832A2D /* TodoSharingSNS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52A000122BA5B87A00832A2D /* Build configuration list for PBXNativeTarget "TodoSharingSNS" */;
+			buildPhases = (
+				52A0FFE82BA5B87900832A2D /* Sources */,
+				52A0FFE92BA5B87900832A2D /* Frameworks */,
+				52A0FFEA2BA5B87900832A2D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TodoSharingSNS;
+			packageProductDependencies = (
+				5283BB9A2BAC7B6100D0C6AF /* FirebaseAnalytics */,
+				5283BB9C2BAC7B6A00D0C6AF /* FirebaseAuth */,
+				528BFEE92BC0F0E400F8F3FB /* FirebaseFirestoreSwift */,
+				528BFEEB2BC0F0F200F8F3FB /* FirebaseFirestore */,
+			);
+			productName = TodoSharingSNS;
+			productReference = 52A0FFEC2BA5B87900832A2D /* TodoSharingSNS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		52A0FFFD2BA5B87A00832A2D /* TodoSharingSNSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52A000152BA5B87A00832A2D /* Build configuration list for PBXNativeTarget "TodoSharingSNSTests" */;
+			buildPhases = (
+				52A0FFFA2BA5B87A00832A2D /* Sources */,
+				52A0FFFB2BA5B87A00832A2D /* Frameworks */,
+				52A0FFFC2BA5B87A00832A2D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52A000002BA5B87A00832A2D /* PBXTargetDependency */,
+			);
+			name = TodoSharingSNSTests;
+			productName = TodoSharingSNSTests;
+			productReference = 52A0FFFE2BA5B87A00832A2D /* TodoSharingSNSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52A0FFE42BA5B87900832A2D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					52A000072BA5B87A00832A2D = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 52A0FFEB2BA5B87900832A2D;
+					};
+					52A0FFEB2BA5B87900832A2D = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					52A0FFFD2BA5B87A00832A2D = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 52A0FFEB2BA5B87900832A2D;
+					};
+				};
+			};
+			buildConfigurationList = 52A0FFE72BA5B87900832A2D /* Build configuration list for PBXProject "TodoSharingSNS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ja,
+			);
+			mainGroup = 52A0FFE32BA5B87900832A2D;
+			packageReferences = (
+				5283BB982BAC7A6E00D0C6AF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = 52A0FFED2BA5B87900832A2D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52A0FFEB2BA5B87900832A2D /* TodoSharingSNS */,
+				52A0FFFD2BA5B87A00832A2D /* TodoSharingSNSTests */,
+				52A000072BA5B87A00832A2D /* TodoSharingSNSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52A000062BA5B87A00832A2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52A0FFEA2BA5B87900832A2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52A0FFF92BA5B87A00832A2D /* Preview Assets.xcassets in Resources */,
+				52A0FFF62BA5B87A00832A2D /* Assets.xcassets in Resources */,
+				5283BBAB2BAEA97100D0C6AF /* Localizable.xcstrings in Resources */,
+				5283BB972BAC786C00D0C6AF /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52A0FFFC2BA5B87A00832A2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52A000042BA5B87A00832A2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52A0000F2BA5B87A00832A2D /* TodoSharingSNSUITestsLaunchTests.swift in Sources */,
+				52A0000D2BA5B87A00832A2D /* TodoSharingSNSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52A0FFE82BA5B87900832A2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				528BFF052BC1A51700F8F3FB /* CreateUsernameView.swift in Sources */,
+				5283BBC72BB0536000D0C6AF /* FirestoreDataSource.swift in Sources */,
+				52FCD6532BBBED3A003AD746 /* ContentView.swift in Sources */,
+				528BFEE82BC0F0B400F8F3FB /* RegistrationViewModel.swift in Sources */,
+				528BFEF32BC0F67000F8F3FB /* AddEmailView.swift in Sources */,
+				528BFEF12BC0F53400F8F3FB /* LoginViewModel.swift in Sources */,
+				528BFEF52BC0F73200F8F3FB /* TextFieldModifier.swift in Sources */,
+				5283BBA32BADAA7000D0C6AF /* MainTabView.swift in Sources */,
+				528BFEFB2BC19DAB00F8F3FB /* FeedViewModel.swift in Sources */,
+				5283BB932BAC5B8B00D0C6AF /* Todo.swift in Sources */,
+				528BFF072BC1A53200F8F3FB /* CreatePasswordView.swift in Sources */,
+				5283BBC02BB0134100D0C6AF /* HomeViewModel.swift in Sources */,
+				528BFF092BC1A55600F8F3FB /* CompleteSignUpView.swift in Sources */,
+				5283BBB22BAF0A1300D0C6AF /* User.swift in Sources */,
+				528BFEF72BC19D6000F8F3FB /* FeedView.swift in Sources */,
+				52FCD6572BBBEEE8003AD746 /* ContentViewModel.swift in Sources */,
+				528BFF012BC19E8C00F8F3FB /* FeedCell.swift in Sources */,
+				52A0FFF02BA5B87900832A2D /* TodoSharingSNSApp.swift in Sources */,
+				528BFEFF2BC19E5900F8F3FB /* PostService.swift in Sources */,
+				528BFEEF2BC0F15500F8F3FB /* UserService.swift in Sources */,
+				528BFEFD2BC19E1000F8F3FB /* Post.swift in Sources */,
+				5283BBA72BADAB0E00D0C6AF /* LoginView.swift in Sources */,
+				528BFEE62BC0F04D00F8F3FB /* AuthService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52A0FFFA2BA5B87A00832A2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52A000032BA5B87A00832A2D /* TodoSharingSNSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		52A000002BA5B87A00832A2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52A0FFEB2BA5B87900832A2D /* TodoSharingSNS */;
+			targetProxy = 52A0FFFF2BA5B87A00832A2D /* PBXContainerItemProxy */;
+		};
+		52A0000A2BA5B87A00832A2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52A0FFEB2BA5B87900832A2D /* TodoSharingSNS */;
+			targetProxy = 52A000092BA5B87A00832A2D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		52A000102BA5B87A00832A2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		52A000112BA5B87A00832A2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		52A000132BA5B87A00832A2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TodoSharingSNS/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taichone.TodoSharingSNS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		52A000142BA5B87A00832A2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TodoSharingSNS/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taichone.TodoSharingSNS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		52A000162BA5B87A00832A2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taichone.TodoSharingSNSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TodoSharingSNS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TodoSharingSNS";
+			};
+			name = Debug;
+		};
+		52A000172BA5B87A00832A2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taichone.TodoSharingSNSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TodoSharingSNS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TodoSharingSNS";
+			};
+			name = Release;
+		};
+		52A000192BA5B87A00832A2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taichone.TodoSharingSNSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TodoSharingSNS;
+			};
+			name = Debug;
+		};
+		52A0001A2BA5B87A00832A2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taichone.TodoSharingSNSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TodoSharingSNS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52A000122BA5B87A00832A2D /* Build configuration list for PBXNativeTarget "TodoSharingSNS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52A000132BA5B87A00832A2D /* Debug */,
+				52A000142BA5B87A00832A2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52A000152BA5B87A00832A2D /* Build configuration list for PBXNativeTarget "TodoSharingSNSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52A000162BA5B87A00832A2D /* Debug */,
+				52A000172BA5B87A00832A2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52A000182BA5B87A00832A2D /* Build configuration list for PBXNativeTarget "TodoSharingSNSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52A000192BA5B87A00832A2D /* Debug */,
+				52A0001A2BA5B87A00832A2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52A0FFE72BA5B87900832A2D /* Build configuration list for PBXProject "TodoSharingSNS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52A000102BA5B87A00832A2D /* Debug */,
+				52A000112BA5B87A00832A2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5283BB982BAC7A6E00D0C6AF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.23.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5283BB9A2BAC7B6100D0C6AF /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5283BB982BAC7A6E00D0C6AF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		5283BB9C2BAC7B6A00D0C6AF /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5283BB982BAC7A6E00D0C6AF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		528BFEE92BC0F0E400F8F3FB /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5283BB982BAC7A6E00D0C6AF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		528BFEEB2BC0F0F200F8F3FB /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5283BB982BAC7A6E00D0C6AF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 52A0FFE42BA5B87900832A2D /* Project object */;
+}
