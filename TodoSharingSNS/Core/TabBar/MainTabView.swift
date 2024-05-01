@@ -14,47 +14,29 @@ struct MainTabView: View {
     var body: some View {
         TabView(selection: self.$selectedIndex) {
             // TODO: - FeedView()
-            Text("Feed")
+            Text("FollowingUsersView")
                 .onAppear {
                     self.selectedIndex = 0
                 }
                 .tabItem {
-                    Image(systemName: "house")
+                    Image(systemName: "person.crop.rectangle.stack.fill")
                 }.tag(0)
 
-            // TODO: - SearchView()
-            Text("Search")
+            Text("CurrentUserTodoView")
                 .onAppear {
                     self.selectedIndex = 1
                 }
                 .tabItem {
-                    Image(systemName: "magnifyingglass")
+                    Image(systemName: "list.bullet")
                 }.tag(1)
 
-            // TODO: - UploadPostView(tabIndex: self.$selectedIndex)
-            Text("Upload Post")
+             CurrentUserProfileView(user: self.user)
                 .onAppear {
                     self.selectedIndex = 2
                 }
                 .tabItem {
-                    Image(systemName: "plus.square")
-                }.tag(2)
-
-            Text("Notifications")
-                .onAppear {
-                    self.selectedIndex = 3
-                }
-                .tabItem {
-                    Image(systemName: "heart")
-                }.tag(3)
-
-             CurrentUserProfileView(user: self.user)
-                .onAppear {
-                    self.selectedIndex = 4
-                }
-                .tabItem {
                     Image(systemName: "person")
-                }.tag(4)
+                }.tag(2)
         }
         .accentColor(.black)
     }

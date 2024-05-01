@@ -13,7 +13,7 @@ import Firebase
 class EditProfileViewModel: ObservableObject {
     @Published var user: User
     @Published var selectedImage: PhotosPickerItem? {
-        didSet { Task { await loadImage(fromItem: self.selectedImage) } }
+        didSet { Task { await self.loadImage(fromItem: self.selectedImage) } }
     }
     @Published var profileImage: Image?
     @Published var fullname = ""
