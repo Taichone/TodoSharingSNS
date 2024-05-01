@@ -4,6 +4,9 @@
     "%@ " : {
 
     },
+    "%lld" : {
+
+    },
     "%lld likes" : {
 
     },
@@ -11,6 +14,9 @@
 
     },
     "Add your email" : {
+
+    },
+    "Cancel" : {
 
     },
     "Click below to complete registration and start using iMana" : {
@@ -34,6 +40,15 @@
     "Don't have an account?" : {
 
     },
+    "Done" : {
+
+    },
+    "Edit Profile" : {
+
+    },
+    "Edit profile picture" : {
+
+    },
     "Email" : {
 
     },
@@ -44,6 +59,9 @@
 
     },
     "Feed" : {
+
+    },
+    "Follow" : {
 
     },
     "Forgot Password" : {

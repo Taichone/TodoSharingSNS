@@ -9,11 +9,12 @@ import SwiftUI
 
 struct CurrentUserProfileView: View {
     let user: User
-    
+
     var body: some View {
         NavigationStack {
             ScrollView {
-                Text(self.user.id)
+                // header
+                ProfileHeaderView(user: self.user)
             }
             .navigationTitle("Profile")
             .navigationBarTitleDisplayMode(.inline)
