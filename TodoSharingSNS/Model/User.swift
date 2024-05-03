@@ -5,30 +5,48 @@
 //  Created by Taichi on 2024/03/23.
 //
 
-import Foundation
 import Firebase
+import FirebaseFirestoreSwift
 
-struct User:Identifiable, Hashable, Codable {
-    let id: String
+struct User: Identifiable, Codable {
+    @DocumentID var uid: String?
     var username:String
+    let email: String
     var profileImageUrl: String?
     var fullname: String?
     var bio: String?
-    let email: String
+    var stats: UserStats? // Followers 数, Following　数
+    var isFollowed: Bool? = false
     
-    var isCurrentUser: Bool {
-        guard let currentUid = Auth.auth().currentUser?.uid else { return false }
-        return currentUid == self.id
+    var isCurrentUser: Bool { return Auth.auth().currentUser?.uid == self.uid }
+    var id: String { return self.uid ?? UUID().uuidString }
+}
+
+extension User: Hashable {
+    var identifier: String { return self.id }
+    
+    public func hash(into hasher: inout Hasher) {
+        return hasher.combine(self.identifier)
+    }
+    
+    static func == (lhs: User, rhs: User) -> Bool {
+        return lhs.id == rhs.id
     }
 }
 
 extension User {
     static var MOCK_USERS: [User] = [
-        .init(id: UUID().uuidString, username: "tori", profileImageUrl: nil, fullname: "鳥谷敬", bio: "さぁ俺がヒーローだ", email: "toritani@gmail.com"),
-        .init(id: UUID().uuidString, username: "chojin", profileImageUrl: nil, fullname: "糸井嘉男", bio: "超人です", email: "itoi@gmail.com"),
-        .init(id: UUID().uuidString, username: "koji.speed", profileImageUrl: nil, fullname: "近本光司", bio: "tigers #5", email: "chikamoto@gmail.com"),
-        .init(id: UUID().uuidString, username: "kinami_seiya", profileImageUrl: nil, fullname: "木浪聖也", bio: "タイガース #0", email: "kinami@gmail.com"),
-        .init(id: UUID().uuidString, username: "taku_dream", profileImageUrl: nil, fullname: "中野拓夢", bio: "tigers #51", email: "nakano@gmail.com"),
-        .init(id: UUID().uuidString, username: "all_nil", profileImageUrl: nil, fullname: nil, bio: nil, email: "nil@gmail.com")
+        .init(uid: UUID().uuidString, username: "tori", email: "toritani@gmail.com", profileImageUrl: nil, fullname: "鳥谷敬", bio: "さぁ俺がヒーローだ"),
+        .init(uid: UUID().uuidString, username: "chojin", email: "itoi@gmail.com", profileImageUrl: nil, fullname: "糸井嘉男", bio: "超人です"),
+        .init(uid: UUID().uuidString, username: "koji.speed", email: "chikamoto@gmail.com", profileImageUrl: nil, fullname: "近本光司", bio: "tigers #5"),
+        .init(uid: UUID().uuidString, username: "kinami_seiya", email: "kinami@gmail.com", profileImageUrl: nil, fullname: "木浪聖也", bio: "タイガース #0"),
+        .init(uid: UUID().uuidString, username: "taku_dream", email: "nakano@gmail.com", profileImageUrl: nil, fullname: "中野拓夢", bio: "tigers #51"),
+        .init(uid: UUID().uuidString, username: "all_nil", email: "nil@gmail.com", profileImageUrl: nil, fullname: nil, bio: nil)
     ]
+}
+
+struct UserStats: Codable {
+    var following: Int
+    var posts: Int
+    var followers: Int
 }

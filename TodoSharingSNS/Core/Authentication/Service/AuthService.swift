@@ -55,7 +55,7 @@ class AuthService {
     }
 
     private func uploadUserData(uid: String, username: String, email: String) async {
-        let user = User(id: uid, username: username, email: email)
+        let user = User(uid: uid, username: username, email: email)
         self.currentUser = user
         guard let encodedUser = try? Firestore.Encoder().encode(user) else { return } // Codable 準拠した型が encode 可能
         try? await Firestore.firestore().collection("users").document(user.id).setData(encodedUser)

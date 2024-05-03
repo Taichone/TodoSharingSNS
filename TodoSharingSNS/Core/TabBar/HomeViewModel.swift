@@ -10,7 +10,7 @@ import Foundation
 final class HomeViewModel: ObservableObject {
     let currentUid: String
     lazy var user: User = {
-        return User(id: self.currentUid, username: "", email: "")
+        return User(uid: self.currentUid, username: "", email: "")
     }()
     
     init(currentUid: String) {
