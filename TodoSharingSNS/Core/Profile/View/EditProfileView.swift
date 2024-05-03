@@ -35,7 +35,7 @@ struct EditProfileView: View {
                     
                     Button() {
                         Task {
-                            try await self.viewModel.updateUserDate()
+                            try await self.viewModel.updateUserData()
                             self.dismiss()
                         }
                     } label: {

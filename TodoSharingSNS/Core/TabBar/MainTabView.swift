@@ -22,7 +22,7 @@ struct MainTabView: View {
                     Image(systemName: "person.crop.rectangle.stack.fill")
                 }.tag(0)
 
-            Text("CurrentUserTodoView")
+            TodoView(uid: self.user.uid ?? "")
                 .onAppear {
                     self.selectedIndex = 1
                 }

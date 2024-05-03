@@ -8,7 +8,7 @@
 import Firebase
 import FirebaseFirestoreSwift
 
-struct User: Identifiable, Codable {
+struct User:Identifiable, Codable {
     @DocumentID var uid: String?
     var username:String
     let email: String
@@ -20,6 +20,8 @@ struct User: Identifiable, Codable {
     
     var isCurrentUser: Bool { return Auth.auth().currentUser?.uid == self.uid }
     var id: String { return self.uid ?? UUID().uuidString }
+    
+    var todoList: [Todo]?
 }
 
 extension User: Hashable {
@@ -36,11 +38,11 @@ extension User: Hashable {
 
 extension User {
     static var MOCK_USERS: [User] = [
-        .init(uid: UUID().uuidString, username: "tori", email: "toritani@gmail.com", profileImageUrl: nil, fullname: "鳥谷敬", bio: "さぁ俺がヒーローだ"),
-        .init(uid: UUID().uuidString, username: "chojin", email: "itoi@gmail.com", profileImageUrl: nil, fullname: "糸井嘉男", bio: "超人です"),
-        .init(uid: UUID().uuidString, username: "koji.speed", email: "chikamoto@gmail.com", profileImageUrl: nil, fullname: "近本光司", bio: "tigers #5"),
-        .init(uid: UUID().uuidString, username: "kinami_seiya", email: "kinami@gmail.com", profileImageUrl: nil, fullname: "木浪聖也", bio: "タイガース #0"),
-        .init(uid: UUID().uuidString, username: "taku_dream", email: "nakano@gmail.com", profileImageUrl: nil, fullname: "中野拓夢", bio: "tigers #51"),
+        .init(uid: UUID().uuidString, username: "tori", email: "toritani@gmail.com", profileImageUrl: nil, fullname: "鳥谷敬", bio: "さぁ俺がヒーローだ", todoList: Todo.MOCK_TODOS),
+        .init(uid: UUID().uuidString, username: "chojin", email: "itoi@gmail.com", profileImageUrl: nil, fullname: "糸井嘉男", bio: "超人です", todoList: Todo.MOCK_TODOS),
+        .init(uid: UUID().uuidString, username: "koji.speed", email: "chikamoto@gmail.com", profileImageUrl: nil, fullname: "近本光司", bio: "tigers #5", todoList: Todo.MOCK_TODOS),
+        .init(uid: UUID().uuidString, username: "kinami_seiya", email: "kinami@gmail.com", profileImageUrl: nil, fullname: "木浪聖也", bio: "タイガース #0", todoList: Todo.MOCK_TODOS),
+        .init(uid: UUID().uuidString, username: "taku_dream", email: "nakano@gmail.com", profileImageUrl: nil, fullname: "中野拓夢", bio: "tigers #51", todoList: Todo.MOCK_TODOS),
         .init(uid: UUID().uuidString, username: "all_nil", email: "nil@gmail.com", profileImageUrl: nil, fullname: nil, bio: nil)
     ]
 }

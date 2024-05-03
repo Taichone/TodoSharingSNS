@@ -14,7 +14,7 @@ struct CurrentUserProfileView: View {
         NavigationStack {
             ScrollView {
                 ProfileHeaderView(user: self.user)
-                Text("TodoView")
+                Text(self.user.uid ?? "uid なし")
             }
             .navigationTitle("Profile")
             .navigationBarTitleDisplayMode(.inline)

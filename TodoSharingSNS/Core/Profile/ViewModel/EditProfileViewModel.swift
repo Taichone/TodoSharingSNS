@@ -42,7 +42,7 @@ class EditProfileViewModel: ObservableObject {
         self.profileImage = Image(uiImage: uiImage) // SwiftUI のイメージに変換
     }
     
-    func updateUserDate() async throws {
+    func updateUserData() async throws {
         // update profile image if changed
         
         var data = [String: Any]()

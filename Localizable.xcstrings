@@ -1,16 +1,7 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "%@ " : {
-
-    },
     "%lld" : {
-
-    },
-    "%lld likes" : {
-
-    },
-    "6h ago" : {
 
     },
     "Add your email" : {
@@ -32,9 +23,6 @@
 
     },
     "Create username" : {
-
-    },
-    "CurrentUserTodoView" : {
 
     },
     "DEBUG: userSession isn't nil, but currentUser is nil" : {
@@ -59,9 +47,6 @@
 
     },
     "Enter your password" : {
-
-    },
-    "Feed" : {
 
     },
     "Follow" : {
@@ -92,6 +77,9 @@
 
     },
     "Profile" : {
+
+    },
+    "Todo list" : {
 
     },
     "TodoView" : {
