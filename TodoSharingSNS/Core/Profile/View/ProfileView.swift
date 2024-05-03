@@ -14,8 +14,8 @@ struct ProfileView: View {
 
     var body: some View {
         ScrollView {
-            // header
             ProfileHeaderView(user: self.user)
+            Text("TodoView")   
         }
         .navigationTitle("Profile")
         .navigationBarTitleDisplayMode(.inline)

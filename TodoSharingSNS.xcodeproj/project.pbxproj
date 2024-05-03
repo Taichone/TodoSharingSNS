@@ -246,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				52313A182BE287A6009D840A /* ProfileView.swift */,
+				528BFF0C2BC2DDF900F8F3FB /* CurrentUserProfileView.swift */,
 				52313A1A2BE287C5009D840A /* ProfileHeaderView.swift */,
 				52313A232BE2894D009D840A /* EditProfileView.swift */,
 			);
@@ -255,7 +256,6 @@
 		528BFF0B2BC2DDE300F8F3FB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				528BFF0C2BC2DDF900F8F3FB /* CurrentUserProfileView.swift */,
 				52313A252BE28972009D840A /* EditProfileViewModel.swift */,
 			);
 			path = ViewModel;
