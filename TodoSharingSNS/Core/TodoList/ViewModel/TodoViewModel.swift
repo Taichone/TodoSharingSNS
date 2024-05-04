@@ -41,6 +41,30 @@ class TodoViewModel: ObservableObject {
         }
     }
     
+    
+    private func updateTodo(todo: Todo) {
+        guard let id = todo.id else {
+            print("Error: Todo does not have a valid documentID.")
+            return
+        }
+
+        let todoRef = self.todoListRef.document(id)
+        
+        guard let encodedTodo = try? Firestore.Encoder().encode(todo) else {
+            print("Error: Failed to encode todo.")
+            return  
+        }
+
+        todoRef.updateData(encodedTodo) { error in
+            if let error = error {
+                print("Error updating todo: \(error)")
+            } else {
+                print("Todo successfully updated.")
+            }
+        }
+    }
+
+    
     private func addTodo(todo: Todo) {
         // Codable 準拠した Todo をエンコード
         guard let encodedTodo = try? Firestore.Encoder().encode(todo) else {

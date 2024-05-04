@@ -10,7 +10,6 @@ import Firebase
 
 struct Todo: Identifiable, Hashable, Codable {
     @DocumentID var id: String?
-    let ownerUid: String
     var title: String
     var completed: Bool
     // TODO: 以下のプロパティを追加
@@ -21,9 +20,9 @@ struct Todo: Identifiable, Hashable, Codable {
 
 extension Todo {
     static let MOCK_TODOS: [Todo] = [
-        .init(ownerUid: "", title: "水やり", completed: false),
-        .init(ownerUid: "", title: "買い物", completed: true),
-        .init(ownerUid: "", title: "携帯の修理", completed: false),
-        .init(ownerUid: "", title: "テスト勉強", completed: false),
+        .init(title: "水やり", completed: false),
+        .init(title: "買い物", completed: true),
+        .init(title: "携帯の修理", completed: false),
+        .init(title: "テスト勉強", completed: false)
     ]
 }

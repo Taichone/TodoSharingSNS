@@ -19,13 +19,14 @@ struct TodoView: View {
             List(0..<self.todoViewModel.todoList.count, id:\.self) { index in
                 HStack {
                     Image(systemName: self.todoViewModel.todoList[index].completed ? "checkmark.circle.fill" : "circle").onTapGesture {
+                        //
                         self.todoViewModel.todoList[index].completed.toggle()
                     }
                     Text(self.todoViewModel.todoList[index].title) // セルに表示するのはタイトルのみ
                 }
                 .foregroundColor(.black)
             }
-            .listStyle(GroupedListStyle()) // イケてるリストスタイルに設定
+//            .listStyle(GroupedListStyle()) // イケてるリストスタイルに設定
             .navigationTitle("Todo list") // ナビゲーションバーのタイトル
             .navigationBarTitleDisplayMode(.inline)
         }
