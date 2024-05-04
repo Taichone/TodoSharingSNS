@@ -17,16 +17,18 @@ struct TodoView: View {
     
     var body: some View {
         NavigationStack {
-            List(0..<self.todoViewModel.todoList.count, id:\.self) { index in
-                HStack {
-                    Image(systemName: self.todoViewModel.todoList[index].completed ? "checkmark.circle.fill" : "circle").onTapGesture {
-                        self.todoViewModel.toggleCompleted(index: index)
+            List {
+                ForEach(self.todoViewModel.todoList, id: \.self) { todo in
+                    HStack {
+                        Image(systemName: todo.completed ? "checkmark.circle.fill" : "circle").onTapGesture {
+                            self.todoViewModel.toggleCompleted(todo: todo)
+                        }
+                        Text(todo.title)
                     }
-                    Text(self.todoViewModel.todoList[index].title) // セルに表示するのはタイトルのみ
+                    .foregroundColor(.black)
                 }
-                .foregroundColor(.black)
+                .onDelete(perform: self.deleteTodo)
             }
-//            .listStyle(GroupedListStyle()) // イケてるリストスタイルに設定
             .navigationTitle("Todo list") // ナビゲーションバーのタイトル
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -42,6 +44,12 @@ struct TodoView: View {
                     }
                 }
             }
+        }
+    }
+
+    private func deleteTodo(at offsets: IndexSet) {
+        for index in offsets {
+            self.todoViewModel.deleteTodo(at: index)
         }
     }
 }
@@ -66,6 +74,9 @@ struct AddTodoModalView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button {
+                        // 変数をリセットして閉じる
+                        self.title = ""
+                        self.notes = ""
                         self.showModal = false
                     } label: {
                         Text("Cancel")
@@ -75,6 +86,9 @@ struct AddTodoModalView: View {
                     Button {
                         let newTodo = Todo(title: self.title, notes: self.notes, completed: false)
                         self.todoViewModel.addTodo(todo: newTodo)
+                        // 変数をリセットして閉じる
+                        self.title = ""
+                        self.notes = ""
                         self.showModal = false
                     } label: {
                         Text("Add")
