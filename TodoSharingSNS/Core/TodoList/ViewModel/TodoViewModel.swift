@@ -41,6 +41,10 @@ class TodoViewModel: ObservableObject {
         }
     }
     
+    func toggleCompleted(index: Range<Int>.Element) {
+        self.todoList[index].completed.toggle()
+        self.updateTodo(todo: self.todoList[index])
+    }
     
     private func updateTodo(todo: Todo) {
         guard let id = todo.id else {
