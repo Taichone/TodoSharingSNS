@@ -11,25 +11,16 @@ import XCTest
 final class TodoSharingSNSTests: XCTestCase {
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        // 各テストメソッドの実行前に呼ばれる。テストケースの前提条件を整える（モックの設定, テスト環境の初期化, リソースの準備など）
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        // 各テストメソッドの実行後に呼ばれる。後処理を行う（生成したモノの削除, 変更した環境のリセット, リソースの解放など）
     }
 
     func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
         self.measure {
-            // Put the code you want to measure the time of here.
+            // measure ブロックの中に測定したいコードを配置すると、実行時間を計測してテスト結果としてレポートする
         }
     }
 

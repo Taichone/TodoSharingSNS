@@ -23,7 +23,6 @@ class TodoViewModel: ObservableObject {
     // TODO: オフライン対応
     // - ローカルに永続化
     // - オンライン復帰後に同期（ローカル優先）
-    // 
 
     private func fetchTodoList() {
         self.todoListRef.getDocuments { (snapshot, error) in
