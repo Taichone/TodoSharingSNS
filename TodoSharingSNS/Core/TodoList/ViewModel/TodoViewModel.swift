@@ -19,6 +19,11 @@ class TodoViewModel: ObservableObject {
         self.todoListRef = Firestore.firestore().collection("todoLists").document(uid).collection("todoList")
         self.fetchTodoList()
     }
+    
+    // TODO: オフライン対応
+    // - ローカルに永続化
+    // - オンライン復帰後に同期（ローカル優先）
+    // 
 
     private func fetchTodoList() {
         self.todoListRef.getDocuments { (snapshot, error) in
@@ -68,15 +73,16 @@ class TodoViewModel: ObservableObject {
         }
     }
 
-    
-    private func addTodo(todo: Todo) {
-        // Codable 準拠した Todo をエンコード
+    func addTodo(todo: Todo) {
+        // MARK: - ローカル
+        self.todoList.append(todo)
+        
+        // MARK: - Firestore
         guard let encodedTodo = try? Firestore.Encoder().encode(todo) else {
             print("Error: Failed to encode todo.")
             return  
         }
         
-        // 新しいドキュメントを作成
         self.todoListRef.addDocument(data: encodedTodo) { error in
             if let error = error {
                 print("Error adding todo: \(error)")

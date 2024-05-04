@@ -4,6 +4,9 @@
     "%lld" : {
 
     },
+    "Add" : {
+
+    },
     "Add your email" : {
 
     },
@@ -64,7 +67,13 @@
     "Login" : {
 
     },
+    "New Todo" : {
+
+    },
     "Next" : {
+
+    },
+    "Notes" : {
 
     },
     "OR" : {
@@ -77,6 +86,9 @@
 
     },
     "Profile" : {
+
+    },
+    "Title" : {
 
     },
     "Todo list" : {

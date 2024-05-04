@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct TodoView: View {
-    @StateObject var todoViewModel: TodoViewModel
+    @StateObject private var todoViewModel: TodoViewModel
+    @State private var showAddTodoModal = false
 
     init(uid: String) {
         self._todoViewModel = StateObject(wrappedValue: TodoViewModel(uid: uid))
@@ -28,6 +29,58 @@ struct TodoView: View {
 //            .listStyle(GroupedListStyle()) // イケてるリストスタイルに設定
             .navigationTitle("Todo list") // ナビゲーションバーのタイトル
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .automatic) {
+                    Button(action: {
+                        self.showAddTodoModal = true
+                    }, label: {
+                        Image(systemName: "plus")
+                            .foregroundStyle(.blue)
+                    })
+                    .sheet(isPresented: self.$showAddTodoModal) {
+                        AddTodoModalView(showModal: self.$showAddTodoModal, todoViewModel: self.todoViewModel)
+                    }
+                }
+            }
+        }
+    }
+}
+
+struct AddTodoModalView: View {
+    @Binding var showModal: Bool
+    @ObservedObject var todoViewModel: TodoViewModel
+    @State private var title = ""
+    @State private var notes = ""
+    
+    var body: some View {
+        NavigationStack {
+            List {
+                VStack {
+                    TextField("Title", text: self.$title)
+                    Divider()
+                    TextField("Notes", text: self.$notes)
+                }
+            }
+            .navigationTitle("New Todo")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button {
+                        self.showModal = false
+                    } label: {
+                        Text("Cancel")
+                    }
+                }
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        let newTodo = Todo(title: self.title, notes: self.notes, completed: false)
+                        self.todoViewModel.addTodo(todo: newTodo)
+                        self.showModal = false
+                    } label: {
+                        Text("Add")
+                    }
+                }
+            }
         }
     }
 }

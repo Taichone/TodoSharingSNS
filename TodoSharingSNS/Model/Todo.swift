@@ -11,9 +11,9 @@ import Firebase
 struct Todo: Identifiable, Hashable, Codable {
     @DocumentID var id: String?
     var title: String
+    var notes = ""
     var completed: Bool
     // TODO: 以下のプロパティを追加
-    // let caption: String
     // var deadline: Date // 時刻のみ表示予定
     // let subTodo: [Todo]?
 }
