@@ -25,6 +25,9 @@
     "Create Account" : {
 
     },
+    "Create Todo" : {
+
+    },
     "Create username" : {
 
     },
@@ -32,6 +35,9 @@
 
     },
     "DEBUG: userSession isn't nil, but currentUser is nil" : {
+
+    },
+    "Delete" : {
 
     },
     "Don't have an account?" : {
@@ -46,6 +52,9 @@
     "Edit profile picture" : {
 
     },
+    "Edit Todo" : {
+
+    },
     "Email" : {
 
     },
@@ -53,6 +62,9 @@
 
     },
     "Enter your password" : {
+
+    },
+    "Error: targetTodo is nil" : {
 
     },
     "Follow" : {
@@ -68,9 +80,6 @@
 
     },
     "Login" : {
-
-    },
-    "New Todo" : {
 
     },
     "Next" : {
@@ -98,6 +107,9 @@
 
     },
     "TodoView" : {
+
+    },
+    "Update" : {
 
     },
     "Username" : {

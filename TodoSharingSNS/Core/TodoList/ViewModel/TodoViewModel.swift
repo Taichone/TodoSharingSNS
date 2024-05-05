@@ -13,6 +13,7 @@ class TodoViewModel: ObservableObject {
     private let todoListRef: CollectionReference
     private let uid: String // 所有者の uid
     @Published var todoList = [Todo]()
+    @Published var targetTodo: Todo?
     
     init(uid: String) {
         self.uid = uid
@@ -51,7 +52,7 @@ class TodoViewModel: ObservableObject {
         self.updateTodo(todo: toggledTodo)
     }
     
-    private func updateTodo(todo: Todo) {
+    func updateTodo(todo: Todo) {
         guard let id = todo.id else {
             print("Error: Todo does not have a valid documentID.")
             return

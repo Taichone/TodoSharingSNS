@@ -8,12 +8,9 @@
 import SwiftUI
 
 struct TodoView: View {
-    @StateObject private var todoViewModel: TodoViewModel
+    @EnvironmentObject private var todoViewModel: TodoViewModel
     @State private var showAddTodoModal = false
-
-    init(uid: String) {
-        self._todoViewModel = StateObject(wrappedValue: TodoViewModel(uid: uid))
-    }
+    @State private var showEditTodoModal = false
     
     var body: some View {
         NavigationStack {
@@ -24,13 +21,12 @@ struct TodoView: View {
                             self.todoViewModel.toggleCompleted(todo: todo)
                         }
                         Text(todo.title)
-                        // TODO: デバッグ用の即席 UI なので、EditTodoView で削除できるようにする
                         Spacer()
-                        Image(systemName: "trash")
+                        Image(systemName: "info.circle")
+                            .foregroundStyle(.blue)
                             .onTapGesture {
-                                if let id = todo.id {
-                                    self.todoViewModel.deleteTodo(id: id)
-                                }   
+                                self.todoViewModel.targetTodo = todo
+                                self.showEditTodoModal = true
                             }
                     }
                     .foregroundColor(.black)
@@ -47,7 +43,14 @@ struct TodoView: View {
                             .foregroundStyle(.blue)
                     })
                     .sheet(isPresented: self.$showAddTodoModal) {
-                        AddTodoView(showModal: self.$showAddTodoModal, todoViewModel: self.todoViewModel)
+                        AddTodoView(showModal: self.$showAddTodoModal)
+                    }
+                    .sheet(isPresented: self.$showEditTodoModal){
+                        if let targetTodo = self.todoViewModel.targetTodo {
+                            EditTodoView(showModal: self.$showEditTodoModal, todo: targetTodo) 
+                        } else {
+                            Text("Error: targetTodo is nil")
+                        }
                     }
                 }
             }
@@ -56,5 +59,6 @@ struct TodoView: View {
 }
 
 #Preview {
-    TodoView(uid: User.MOCK_USERS[0].uid ?? "")
+    TodoView()
+        .environmentObject(TodoViewModel(uid: User.MOCK_USERS[0].uid ?? ""))
 }

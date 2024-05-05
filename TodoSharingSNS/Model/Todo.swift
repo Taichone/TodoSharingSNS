@@ -14,6 +14,14 @@ struct Todo: Identifiable, Hashable, Codable {
     var notes = ""
     var deadline: TodoDeadline
     var completed: Bool
+    
+    init(id: String = UUID().uuidString, title: String, notes: String = "", deadline: TodoDeadline, completed: Bool) {
+        self.id = id
+        self.title = title
+        self.notes = notes
+        self.deadline = deadline
+        self.completed = completed
+    }
 }
 
 extension Todo {

@@ -22,7 +22,8 @@ struct MainTabView: View {
                     Image(systemName: "person.crop.rectangle.stack.fill")
                 }.tag(0)
 
-            TodoView(uid: self.user.uid ?? "")
+            TodoView()
+                .environmentObject(TodoViewModel(uid: self.user.uid ?? ""))
                 .onAppear {
                     self.selectedIndex = 1
                 }
