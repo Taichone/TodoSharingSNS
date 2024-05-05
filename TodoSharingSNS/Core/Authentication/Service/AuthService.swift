@@ -58,7 +58,7 @@ class AuthService {
         let user = User(uid: uid, username: username, email: email)
         self.currentUser = user
         guard let encodedUser = try? Firestore.Encoder().encode(user) else { return } // Codable 準拠した型が encode 可能
-        try? await Firestore.firestore().collection("users").document(user.id).setData(encodedUser)
+        try? await FirestoreConstants.userCollection.document(user.id).setData(encodedUser)
     }
 }
 

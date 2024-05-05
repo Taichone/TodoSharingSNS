@@ -16,7 +16,7 @@ class TodoViewModel: ObservableObject {
     
     init(uid: String) {
         self.uid = uid
-        self.todoListRef = Firestore.firestore().collection("todoLists").document(uid).collection("todoList")
+        self.todoListRef = FirestoreConstants.todoListCollection.document(uid).collection("todoList")
         self.fetchTodoList()
     }
     

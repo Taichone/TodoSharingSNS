@@ -17,6 +17,7 @@
 		52313A282BE289D0009D840A /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52313A272BE289D0009D840A /* ImageUploader.swift */; };
 		52313A2A2BE289F2009D840A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 52313A292BE289F2009D840A /* FirebaseStorage */; };
 		527D134B2BE60B530075C654 /* TodoViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527D134A2BE60B530075C654 /* TodoViewModelTests.swift */; };
+		527D13552BE7323C0075C654 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527D13542BE7323C0075C654 /* Constants.swift */; };
 		5283BB972BAC786C00D0C6AF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5283BB962BAC786C00D0C6AF /* GoogleService-Info.plist */; };
 		5283BB9B2BAC7B6100D0C6AF /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5283BB9A2BAC7B6100D0C6AF /* FirebaseAnalytics */; };
 		5283BB9D2BAC7B6A00D0C6AF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5283BB9C2BAC7B6A00D0C6AF /* FirebaseAuth */; };
@@ -76,6 +77,7 @@
 		52313A252BE28972009D840A /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
 		52313A272BE289D0009D840A /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		527D134A2BE60B530075C654 /* TodoViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewModelTests.swift; sourceTree = "<group>"; };
+		527D13542BE7323C0075C654 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5283BB962BAC786C00D0C6AF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5283BBA22BADAA7000D0C6AF /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		5283BBA62BADAB0E00D0C6AF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -156,6 +158,37 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		527D134C2BE731250075C654 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				527D13502BE731950075C654 /* View */,
+				527D134F2BE731930075C654 /* ViewModel */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		527D134F2BE731930075C654 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		527D13502BE731950075C654 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		527D13532BE7320A0075C654 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				527D13542BE7323C0075C654 /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		5283BB992BAC7B6100D0C6AF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +212,7 @@
 				52FCD6452BBBEBFE003AD746 /* Components */,
 				52FCD64F2BBBECA7003AD746 /* Profile */,
 				52FCD64E2BBBECA0003AD746 /* Root */,
+				527D134C2BE731250075C654 /* Search */,
 				52FCD64D2BBBEC44003AD746 /* TabBar */,
 				52FCD64C2BBBEC43003AD746 /* TodoList */,
 			);
@@ -293,6 +327,7 @@
 				528BFEE32BC0EB3600F8F3FB /* App */,
 				5283BBB82BAFE30600D0C6AF /* Core */,
 				5283BBB52BAFE29D00D0C6AF /* Model */,
+				527D13532BE7320A0075C654 /* Utils */,
 				528BFEED2BC0F13F00F8F3FB /* Service */,
 				52A0FFF72BA5B87A00832A2D /* Preview Content */,
 			);
@@ -558,6 +593,7 @@
 				5296DEA72BE4D51E00000D1C /* TodoView.swift in Sources */,
 				52FCD6532BBBED3A003AD746 /* ContentView.swift in Sources */,
 				528BFEE82BC0F0B400F8F3FB /* RegistrationViewModel.swift in Sources */,
+				527D13552BE7323C0075C654 /* Constants.swift in Sources */,
 				528BFEF32BC0F67000F8F3FB /* AddEmailView.swift in Sources */,
 				52313A282BE289D0009D840A /* ImageUploader.swift in Sources */,
 				528BFF0D2BC2DDF900F8F3FB /* CurrentUserProfileView.swift in Sources */,
