@@ -1,9 +1,6 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "" : {
-
-    },
     "%lld" : {
 
     },
@@ -29,6 +26,9 @@
 
     },
     "Create username" : {
+
+    },
+    "Deadline" : {
 
     },
     "DEBUG: userSession isn't nil, but currentUser is nil" : {
