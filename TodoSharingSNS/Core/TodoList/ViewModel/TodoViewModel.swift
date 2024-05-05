@@ -98,18 +98,16 @@ class TodoViewModel: ObservableObject {
         self.fetchTodoList()
     }
     
-    func deleteTodo(at index: Int) {
-        if let id = todoList[index].id {
-            // Firestore から削除
-            self.todoListRef.document(id).delete { error in
-                if let error = error {
-                    print("Error deleting todo: \(error)")
-                } else {
-                    self.todoList.remove(at: index) // 成功した場合はローカルからも削除
+    func deleteTodo(id: String) {
+        // Firestore から削除
+        self.todoListRef.document(id).delete { error in
+            if let error = error {
+                print("Error deleting todo: \(error)")
+            } else {
+                if let index = self.todoList.firstIndex(where: { $0.id == id }) {
+                    self.todoList.remove(at: index) // 成功した場合はローカルからも削除   
                 }
             }
-        } else {
-            print("Todo does not have a valid ID.")
-        }
+        }        
     }
 }

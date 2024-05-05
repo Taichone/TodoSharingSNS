@@ -24,10 +24,17 @@ struct TodoView: View {
                             self.todoViewModel.toggleCompleted(todo: todo)
                         }
                         Text(todo.title)
+                        // TODO: デバッグ用の即席 UI なので、EditTodoView で削除できるようにする
+                        Spacer()
+                        Image(systemName: "trash")
+                            .onTapGesture {
+                                if let id = todo.id {
+                                    self.todoViewModel.deleteTodo(id: id)
+                                }   
+                            }
                     }
                     .foregroundColor(.black)
                 }
-                .onDelete(perform: self.deleteTodo)
             }
             .navigationTitle("Todo list") // ナビゲーションバーのタイトル
             .navigationBarTitleDisplayMode(.inline)
@@ -44,12 +51,6 @@ struct TodoView: View {
                     }
                 }
             }
-        }
-    }
-
-    private func deleteTodo(at offsets: IndexSet) {
-        for index in offsets {
-            self.todoViewModel.deleteTodo(at: index)
         }
     }
 }
