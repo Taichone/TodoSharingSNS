@@ -59,6 +59,7 @@ struct AddTodoModalView: View {
     @ObservedObject var todoViewModel: TodoViewModel
     @State private var title = ""
     @State private var notes = ""
+    @State private var deadline = TodoDeadline.allday
     
     var body: some View {
         NavigationStack {
@@ -67,6 +68,13 @@ struct AddTodoModalView: View {
                     TextField("Title", text: self.$title)
                     Divider()
                     TextField("Notes", text: self.$notes)
+                    Divider()
+                    Picker("", selection: self.$deadline) {
+                        ForEach(TodoDeadline.allCases, id: \.self) { (deadlineCase) in
+                            Text(deadlineCase.rawValue).tag(deadlineCase)
+                        }
+                    }
+                    .pickerStyle(SegmentedPickerStyle())   
                 }
             }
             .navigationTitle("New Todo")
@@ -74,21 +82,21 @@ struct AddTodoModalView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button {
-                        // 変数をリセットして閉じる
-                        self.title = ""
-                        self.notes = ""
+                        self.resetAllProperties()
                         self.showModal = false
                     } label: {
                         Text("Cancel")
                     }
                 }
+                
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        let newTodo = Todo(title: self.title, notes: self.notes, completed: false)
+                        let newTodo = Todo(title: self.title,
+                                           notes: self.notes,
+                                           deadline: self.deadline,
+                                           completed: false)
                         self.todoViewModel.addTodo(todo: newTodo)
-                        // 変数をリセットして閉じる
-                        self.title = ""
-                        self.notes = ""
+                        self.resetAllProperties()
                         self.showModal = false
                     } label: {
                         Text("Add")
@@ -96,6 +104,12 @@ struct AddTodoModalView: View {
                 }
             }
         }
+    }
+    
+    private func resetAllProperties() {
+        self.title = ""
+        self.notes = ""
+        self.deadline = .allday
     }
 }
 

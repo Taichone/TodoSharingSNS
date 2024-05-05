@@ -12,17 +12,22 @@ struct Todo: Identifiable, Hashable, Codable {
     @DocumentID var id: String?
     var title: String
     var notes = ""
+    var deadline: TodoDeadline
     var completed: Bool
-    // TODO: 以下のプロパティを追加
-    // var deadline: Date // 時刻のみ表示予定
-    // let subTodo: [Todo]?
 }
 
 extension Todo {
     static let MOCK_TODOS: [Todo] = [
-        .init(title: "水やり", completed: false),
-        .init(title: "買い物", completed: true),
-        .init(title: "携帯の修理", completed: false),
-        .init(title: "テスト勉強", completed: false)
+        .init(title: "水やり", deadline: .allday, completed: false),
+        .init(title: "買い物", deadline: .morning, completed: true),
+        .init(title: "携帯の修理", deadline: .afternoon, completed: false),
+        .init(title: "テスト勉強", deadline: .tonight, completed: false)
     ]
+}
+
+enum TodoDeadline: String, Codable, CaseIterable {
+    case allday = "All-day"
+    case morning = "Morning"
+    case afternoon = "Afternoon"
+    case tonight = "Tonight"
 }
