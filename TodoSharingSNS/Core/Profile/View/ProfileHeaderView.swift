@@ -54,7 +54,7 @@ struct ProfileHeaderView: View {
                     .font(.subheadline)
                     .fontWeight(.semibold)
                     .frame(width: 360, height: 32)
-                    .background(self.user.isCurrentUser ? .white : Color(.systemBlue))
+                    .background(self.user.isCurrentUser ? .white : Color.mint)
                     .foregroundStyle(self.user.isCurrentUser ? .black : .white)
                     .clipShape(RoundedRectangle(cornerSize: CGSize(width: 10, height: 6)))
                     .overlay(RoundedRectangle(cornerRadius: 6)

@@ -35,6 +35,7 @@ struct LoginView: View {
                     Text("Forgot Password")
                         .font(.footnote)
                         .fontWeight(.semibold)
+                        .foregroundStyle(.mint)
                         .padding(.top)
                         .padding(.trailing, 28)
                 }
@@ -48,7 +49,7 @@ struct LoginView: View {
                         .fontWeight(.semibold)
                         .foregroundStyle(.white)
                         .frame(width:360, height: 44)
-                        .background(Color(.systemBlue))
+                        .background(Color.mint)
                         .clipShape(RoundedRectangle(cornerSize: CGSize(width: 10, height: 10)))
                 }
                 .padding(.vertical)
@@ -81,7 +82,7 @@ struct LoginView: View {
                         .fontWeight(.semibold)
                         .foregroundStyle(.white)
                         .frame(width:360, height: 44)
-                        .background(Color(.systemBlue))
+                        .background(Color.mint)
                         .clipShape(RoundedRectangle(cornerSize: CGSize(width: 10, height: 10)))
                 }
                 

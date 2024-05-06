@@ -37,9 +37,6 @@
     "Deadline" : {
 
     },
-    "DEBUG: userSession isn't nil, but currentUser is nil" : {
-
-    },
     "Delete" : {
 
     },
@@ -82,7 +79,13 @@
     "Forgot Password" : {
 
     },
+    "Home" : {
+
+    },
     "iMana" : {
+
+    },
+    "Logging in..." : {
 
     },
     "Login" : {

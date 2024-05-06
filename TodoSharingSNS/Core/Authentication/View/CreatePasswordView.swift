@@ -38,7 +38,7 @@ struct CreatePasswordView: View {
                     .fontWeight(.semibold)
                     .foregroundStyle(.white)
                     .frame(width:360, height: 44)
-                    .background(Color(.systemBlue))
+                    .background(Color.mint)
                     .clipShape(RoundedRectangle(cornerSize: CGSize(width: 10, height: 10)))
             }
             .padding(.vertical)

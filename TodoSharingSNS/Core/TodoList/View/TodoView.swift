@@ -17,13 +17,16 @@ struct TodoView: View {
             List {
                 ForEach(self.todoViewModel.todoList, id: \.self) { todo in
                     HStack {
-                        Image(systemName: todo.completed ? "checkmark.circle.fill" : "circle").onTapGesture {
+                        Image(systemName: todo.completed ? "checkmark.circle.fill" : "circle")
+                            .foregroundStyle(Color(.label))
+                            .onTapGesture {
                             self.todoViewModel.toggleCompleted(todo: todo)
                         }
                         Text(todo.title)
+                            .foregroundStyle(Color(.label))
                         Spacer()
                         Image(systemName: "info.circle")
-                            .foregroundStyle(.blue)
+                            .foregroundStyle(.mint)
                             .onTapGesture {
                                 self.todoViewModel.targetTodo = todo
                                 self.showEditTodoModal = true
@@ -40,7 +43,7 @@ struct TodoView: View {
                         self.showAddTodoModal = true
                     }, label: {
                         Image(systemName: "plus")
-                            .foregroundStyle(.blue)
+                            .foregroundStyle(.mint)
                     })
                     .sheet(isPresented: self.$showAddTodoModal) {
                         AddTodoView(showModal: self.$showAddTodoModal)

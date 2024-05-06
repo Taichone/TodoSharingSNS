@@ -41,7 +41,7 @@ struct EditTodoView: View {
                 TodoEditorView(title: self.$title, notes: self.$notes, deadline: self.$deadline)
                 
                 Section {
-                    Button { self.showDeletionAlert.toggle() /*self.tappedDeleteButton()*/ } label: { Text("Delete").foregroundStyle(.red) }
+                    Button { self.showDeletionAlert.toggle() } label: { Text("Delete").foregroundStyle(.red) }
                         .alert("Delete this Todo", isPresented: self.$showDeletionAlert, actions: {
                             Button("Cancel", role: .cancel) {}
                             Button("Delete", role: .destructive) { self.tappedDeleteButton() }
@@ -50,7 +50,7 @@ struct EditTodoView: View {
                         })
                 }
             }
-            .navigationTitle("Edit Todo") // edit
+            .navigationTitle("Edit Todo")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {

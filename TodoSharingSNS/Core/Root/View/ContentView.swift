@@ -19,7 +19,7 @@ struct ContentView: View {
             } else if let currentUser = self.viewModel.currentUser {
                 MainTabView(user: currentUser)
             } else {
-                Text("DEBUG: userSession isn't nil, but currentUser is nil")
+                Text("Logging in...")
             }
         }
     }
