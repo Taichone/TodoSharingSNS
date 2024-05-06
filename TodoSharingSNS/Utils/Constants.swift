@@ -10,6 +10,6 @@ import Firebase
 struct FirestoreConstants {
     private static let root = Firestore.firestore()
     
-    static let userCollection = root.collection("users")
-    static let todoListCollection = root.collection("todoLists")
+    static let userCollection = Self.root.collection("users")
+    static let todoListCollection = Self.root.collection("todoLists")
 }
