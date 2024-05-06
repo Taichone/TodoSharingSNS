@@ -10,6 +10,9 @@
     "Add your email" : {
 
     },
+    "Are you sure you want to delete this Todo?" : {
+
+    },
     "Cancel" : {
 
     },
@@ -38,6 +41,9 @@
 
     },
     "Delete" : {
+
+    },
+    "Delete this Todo" : {
 
     },
     "Don't have an account?" : {

@@ -11,6 +11,8 @@ struct EditTodoView: View {
     @Binding var showModal: Bool
     @EnvironmentObject var todoViewModel: TodoViewModel
     
+    @State private var showDeletionAlert = false
+    
     // 引き継ぐ値
     @State private var todoId: String
     @State private var completed: Bool
@@ -39,7 +41,13 @@ struct EditTodoView: View {
                 TodoEditorView(title: self.$title, notes: self.$notes, deadline: self.$deadline)
                 
                 Section {
-                    Button { self.tappedDeleteButton() } label: { Text("Delete").foregroundStyle(.red) }
+                    Button { self.showDeletionAlert.toggle() /*self.tappedDeleteButton()*/ } label: { Text("Delete").foregroundStyle(.red) }
+                        .alert("Delete this Todo", isPresented: self.$showDeletionAlert, actions: {
+                            Button("Cancel", role: .cancel) {}
+                            Button("Delete", role: .destructive) { self.tappedDeleteButton() }
+                        }, message: {
+                            Text("Are you sure you want to delete this Todo?")
+                        })
                 }
             }
             .navigationTitle("Edit Todo") // edit
