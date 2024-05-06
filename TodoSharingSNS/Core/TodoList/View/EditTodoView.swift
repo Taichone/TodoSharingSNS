@@ -35,41 +35,45 @@ struct EditTodoView: View {
     
     var body: some View {
         NavigationStack {
-            TodoEditorView(title: self.$title, notes: self.$notes, deadline: self.$deadline)
-                .navigationTitle("Edit Todo") // edit
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    ToolbarItem(placement: .topBarLeading) {
-                        Button {
-                            self.resetAllProperties()
-                            self.showModal = false
-                        } label: {
-                            Text("Cancel")
-                        }
-                    }
-                    
-                    ToolbarItem(placement: .topBarTrailing) {
-                        Button { // edit
-                            let newTodo = Todo(id: self.todoId, title: self.title, deadline: self.deadline, completed: self.completed)
-                            self.todoViewModel.updateTodo(todo: newTodo)
-                            self.resetAllProperties()
-                            self.showModal = false
-                        } label: {
-                            Text("Update") // edit
-                        }
-                    }
+            List {
+                TodoEditorView(title: self.$title, notes: self.$notes, deadline: self.$deadline)
+                
+                Section {
+                    Button { self.tappedDeleteButton() } label: { Text("Delete").foregroundStyle(.red) }
                 }
-            
-            Button { // delete
-                self.todoViewModel.deleteTodo(id: self.todoId)
-                self.resetAllProperties()
-                self.showModal = false
-            } label: {
-                Text("Delete") // edit
-                    .foregroundStyle(.red)
             }
-            .padding(.bottom)
+            .navigationTitle("Edit Todo") // edit
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button { self.tappedCancelButton() } label: { Text("Cancel") }
+                }
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button { self.tappedUpdateButton() } label: { Text("Update") }
+                }
+            }
         }
+    }
+    
+    private func tappedDeleteButton() {
+        self.todoViewModel.deleteTodo(id: self.todoId)
+        self.resetAllProperties()
+        self.showModal = false
+    }
+    
+    private func tappedCancelButton() {
+        self.resetAllProperties()
+        self.showModal = false
+    }
+    
+    private func tappedUpdateButton() {
+        let editedTodo = Todo(id: self.todoId,
+                           title: self.title,
+                           deadline: self.deadline,
+                           completed: self.completed)
+        self.todoViewModel.updateTodo(todo: editedTodo)
+        self.resetAllProperties()
+        self.showModal = false
     }
     
     private func resetAllProperties() {

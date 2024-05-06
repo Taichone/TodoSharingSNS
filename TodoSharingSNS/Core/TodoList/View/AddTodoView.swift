@@ -16,34 +16,35 @@ struct AddTodoView: View {
     
     var body: some View {
         NavigationStack {
-            TodoEditorView(title: self.$title, notes: self.$notes, deadline: self.$deadline)
-                .navigationTitle("Create Todo") // add
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    ToolbarItem(placement: .topBarLeading) {
-                        Button {
-                            self.resetAllProperties()
-                            self.showModal = false
-                        } label: {
-                            Text("Cancel")
-                        }
-                    }
-                    
-                    ToolbarItem(placement: .topBarTrailing) {
-                        Button { // add
-                            let newTodo = Todo(title: self.title,
-                                               notes: self.notes,
-                                               deadline: self.deadline,
-                                               completed: false)
-                            self.todoViewModel.addTodo(todo: newTodo)
-                            self.resetAllProperties()
-                            self.showModal = false
-                        } label: {
-                            Text("Add")
-                        }
-                    }
+            List {
+                TodoEditorView(title: self.$title, notes: self.$notes, deadline: self.$deadline)    
+            }
+            .navigationTitle("Create Todo") // add
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button { self.tappedCancelButton() } label: { Text("Cancel") }
                 }
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button { self.tappedAddButton() } label: { Text("Add") }
+                }
+            }
         }
+    }
+    
+    private func tappedCancelButton() {
+        self.resetAllProperties()
+        self.showModal = false
+    }
+    
+    private func tappedAddButton() {
+        let newTodo = Todo(title: self.title,
+                           notes: self.notes,
+                           deadline: self.deadline,
+                           completed: false)
+        self.todoViewModel.addTodo(todo: newTodo)
+        self.resetAllProperties()
+        self.showModal = false
     }
     
     private func resetAllProperties() {
