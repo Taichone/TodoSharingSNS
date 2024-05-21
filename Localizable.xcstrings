@@ -10,6 +10,9 @@
     "Add your email" : {
 
     },
+    "An unknown error occurred" : {
+
+    },
     "Are you sure you want to delete this Todo?" : {
 
     },
@@ -67,6 +70,9 @@
     "Enter your password" : {
 
     },
+    "Error" : {
+
+    },
     "Error: targetTodo is nil" : {
 
     },
@@ -92,6 +98,9 @@
 
     },
     "Notes" : {
+
+    },
+    "OK" : {
 
     },
     "OR" : {

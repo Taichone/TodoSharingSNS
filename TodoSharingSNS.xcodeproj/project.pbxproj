@@ -50,6 +50,7 @@
 		52A0FFF02BA5B87900832A2D /* TodoSharingSNSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0FFEF2BA5B87900832A2D /* TodoSharingSNSApp.swift */; };
 		52A0FFF62BA5B87A00832A2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52A0FFF52BA5B87A00832A2D /* Assets.xcassets */; };
 		52A0FFF92BA5B87A00832A2D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52A0FFF82BA5B87A00832A2D /* Preview Assets.xcassets */; };
+		52E8BBE02BFC57CF00278D61 /* RegistrationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8BBDF2BFC57CF00278D61 /* RegistrationViewModelTests.swift */; };
 		52FCD6532BBBED3A003AD746 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCD6522BBBED3A003AD746 /* ContentView.swift */; };
 		52FCD6572BBBEEE8003AD746 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCD6562BBBEEE8003AD746 /* ContentViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -112,6 +113,7 @@
 		52A0FFF52BA5B87A00832A2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52A0FFF82BA5B87A00832A2D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		52A0FFFE2BA5B87A00832A2D /* TodoSharingSNSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoSharingSNSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52E8BBDF2BFC57CF00278D61 /* RegistrationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModelTests.swift; sourceTree = "<group>"; };
 		52FCD6522BBBED3A003AD746 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		52FCD6562BBBEEE8003AD746 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -293,6 +295,7 @@
 			children = (
 				52A000022BA5B87A00832A2D /* TodoSharingSNSTests.swift */,
 				527D134A2BE60B530075C654 /* TodoViewModelTests.swift */,
+				52E8BBDF2BFC57CF00278D61 /* RegistrationViewModelTests.swift */,
 			);
 			path = TodoSharingSNSTests;
 			sourceTree = "<group>";
@@ -637,6 +640,7 @@
 			files = (
 				527D134B2BE60B530075C654 /* TodoViewModelTests.swift in Sources */,
 				52A000032BA5B87A00832A2D /* TodoSharingSNSTests.swift in Sources */,
+				52E8BBE02BFC57CF00278D61 /* RegistrationViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

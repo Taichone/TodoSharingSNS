@@ -76,9 +76,10 @@ struct EditTodoView: View {
     
     private func tappedUpdateButton() {
         let editedTodo = Todo(id: self.todoId,
-                           title: self.title,
-                           deadline: self.deadline,
-                           completed: self.completed)
+                              title: self.title,
+                              notes: self.notes,
+                              deadline: self.deadline,
+                              completed: self.completed)
         self.todoViewModel.updateTodo(todo: editedTodo)
         self.resetAllProperties()
         self.showModal = false
